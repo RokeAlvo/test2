@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока header_logged, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header_logged {
+  & .header__btn-registration {display: none;}
+  & .header__btn-sign {display: none;}
+  & .header__user {display: block;}
+  & .header__rectangle {display: block;}
+
+}

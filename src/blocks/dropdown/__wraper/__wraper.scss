@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__wraper, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.dropdown__wraper {
+  position: relative;
+  width: 266px;
+  min-height: 64px;
+  
+}

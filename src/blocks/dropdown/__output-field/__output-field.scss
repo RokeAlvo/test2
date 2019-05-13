@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__output-field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.dropdown__output-field {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  --height: 44px;
+	min-width: 266px;
+	height: var(--height);
+	border: 1px solid $input-color;
+	border-radius: 4px  4px 0 0;
+  outline: none;
+  cursor: pointer;
+	@include font-input-text;
+  height: 100%;
+  padding-left: 0;
+
+	// &:hover {
+	// 	border-color: $input-color-focus;
+	// }
+	// &:focus {
+	// 	border-color: $input-color-focus;
+  // }
+  & .dropdown__output-field-text {	@include font-input-text;
+    overflow: hidden;
+    line-height: 100%;
+    padding-left: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+

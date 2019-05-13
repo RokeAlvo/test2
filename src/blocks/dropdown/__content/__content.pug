@@ -1,0 +1,29 @@
+//- Все примеси в этом файле должны начинаться c имени блока (dropdown__content)
+
+mixin dropdown__content(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +dropdown__content('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' dropdown__content_' + modsList[i].trim();
+      }
+    }
+
+  .dropdown__content(class=allMods)&attributes(attributes)
+    .dropdown__content-inner
+      .dropdown__content-text=text
+      .dropdown__content-select
+        +content-select-button('-', 'disabled')
+        .dropdown__content-select-value='0'
+        +content-select-button('+')
+
+      block

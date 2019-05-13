@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока header_standard, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header_standart {
+  & .header__btn-registration {display: block;}
+  & .header__btn-sign {display: block;}
+  & .header__user {display: none;}
+  & .header__rectangle {display: none;}
+
+}

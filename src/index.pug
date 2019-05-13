@@ -1,0 +1,23 @@
+include includes/mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body.cv-page
+        //- тут наша страница
+        .cv-page__header
+            +header('', 'standart')
+        .inner
+            +dropdown({
+                        id: 're',
+                        mix: 'button',
+                        mixArg: '"txt", "purple"' })
+            +dropdown({
+                        id: 're2',
+                        mix: 'button',
+                        mixArg: '"txt", "purple"' })
+        script(src='./main.js')

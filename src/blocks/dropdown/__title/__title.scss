@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__title, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.dropdown__title {
+	@include font-input-text-title;
+	margin: 0 0 5px 0;
+}

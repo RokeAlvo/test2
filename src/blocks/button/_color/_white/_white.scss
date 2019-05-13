@@ -1,0 +1,44 @@
+// В этом файле должны быть стили для БЭМ-блока button_color_white, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+$border-width: 2px;
+.button_color_white {
+  background-color: #ffffff;
+  border: $border-width solid transparent;
+  // border-image: linear-gradient(#BC9CFF , #8BA4F9);
+  // border-image-slice: 1;
+  background-clip: padding-box;
+  color: $color-purple;
+}
+
+.button_color_white::before{
+  position: absolute;
+  top: -$border-width; bottom: -$border-width;
+  left: -$border-width; right: -$border-width;
+  z-index: -1;
+  border-radius: 22px;
+  background: $purple-gradient;
+  content: '';
+}
+
+.button_color_white:hover::after{
+  content: '';
+  position: absolute;
+  top: -$border-width; bottom: -$border-width;
+  left: -$border-width; right: -$border-width;
+  border-radius: 22px;
+  background-color:rgba($color: white, $alpha: 0.5);
+  opacity: 1;
+
+}
+
+.button_color_white:hover{
+  background-color: #ffffff;
+  border: $border-width solid transparent;
+  // border-image: linear-gradient(#BC9CFF , #8BA4F9);
+  // border-image-slice: 1;
+  background-clip: padding-box;
+  color: $color-purple;
+  opacity: 1;
+
+}

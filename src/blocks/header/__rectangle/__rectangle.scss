@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока header__rectangle, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__rectangle {
+	min-width: 1px;
+	min-height: 30px;
+	background-color: $navigation-color;
+  opacity: 0.1;
+  align-self: center;
+	margin-right: 30px;
+
+}

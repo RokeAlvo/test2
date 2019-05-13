@@ -1,0 +1,35 @@
+//- Все примеси в этом файле должны начинаться c имени блока (header)
+
+mixin header(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +header('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' header_' + modsList[i].trim();
+      }
+    }
+
+  .header(class=allMods)&attributes(attributes)
+    .header__margin-left
+    .header__logo
+      +logo()
+    .header__margin-center
+    .header__nav
+      +navigation()
+    .header__rectangle
+    .header__user="Cosmin Negoita"
+    .header__btn-sign
+      +button('login', 'color_white')
+    .header__btn-registration
+      +button('register', "color_purple")
+    .header__margin-right
+      block

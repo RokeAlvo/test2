@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока input-text__input, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-text__input {
+	width: 320px;
+	height: 44px;
+	border-color: $input-color;
+	border-width: 1px;
+	border-radius: 4px;
+  outline: none;
+  @include font-input-text;
+  padding-left: 15px;
+
+	&:hover {
+		border-color: $input-color-focus;
+	}
+	&:focus {
+		border-color: $input-color-focus;
+	}
+	&::placeholder {
+		@include font-input-text-placeholder;
+	}
+
+	&::-webkit-input-placeholder {
+		@include font-input-text-placeholder;
+	}
+	&::-moz-placeholder {
+		@include font-input-text-placeholder;
+	} /* Firefox 19+ */
+	&:-moz-placeholder {
+		@include font-input-text-placeholder;
+	} /* Firefox 18- */
+	&:-ms-input-placeholder {
+		@include font-input-text-placeholder;
+	}
+}

@@ -1,0 +1,7 @@
+// В этом файле должны быть стили для БЭМ-блока input-text__text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-text__name {
+	@include font-input-text-title;
+}

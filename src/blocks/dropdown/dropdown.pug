@@ -1,0 +1,12 @@
+mixin dropdown(props)
+    .dropdown
+        .dropdown__wraper(id=props.id)
+            .dropdown__title="dropdown"
+            .dropdown__output-field
+                .dropdown__button-down.dropdown__button-down_undroped
+                p.dropdown__output-field-text="2 спальни, 1 ванна? b tot vyjuj xntyj? ukfdyj xnj ,"
+            .dropdown__content-field
+                +dropdown__content('Спальни')
+                +dropdown__content('Госстинные')
+                +dropdown__content('Ванные комнаты')
+                    block

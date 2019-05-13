@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (content-select-buttion)
+
+mixin content-select-button(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +content-select-buttion('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' content-select-button_' + modsList[i].trim();
+      }
+    }
+
+  button.content-select-button(class=allMods)=text
+    
+      block

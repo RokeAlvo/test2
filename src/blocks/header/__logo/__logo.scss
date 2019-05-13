@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока header__logo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__logo {
+
+  max-width: 106px;
+  max-height: 40px;
+  align-self: center;
+  margin-right: 30px;
+}

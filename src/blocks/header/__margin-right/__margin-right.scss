@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока header__margin-right, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__margin-right {
+  flex-basis: 27%;
+  min-width: 10px;
+}

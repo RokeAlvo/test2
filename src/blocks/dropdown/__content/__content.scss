@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.dropdown__content {
+
+  $block-name:                &; // #{$block-name}__element
+  @include font-input-text-select;
+}
+
+.dropdown__content-inner{
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.dropdown__content-select{
+  align-self: flex-end;
+  height: 30px;
+  width: 92px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 7px;
+
+}
+
+.dropdown__content-text{
+  margin-left: 15px;
+}

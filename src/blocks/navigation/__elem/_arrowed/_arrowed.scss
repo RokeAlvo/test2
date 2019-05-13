@@ -1,0 +1,42 @@
+// В этом файле должны быть стили для БЭМ-блока navigation__elem_arrowed, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.navigation__elem_arrowed {
+	display: inline-flex;
+	align-items: flex-start;
+	text-align: center;
+	align-self: flex-start;
+
+}
+
+.navigation__elem_arrowed:after {
+	content: "expand_more";
+	align-self: flex-start;
+
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	color: $navigation-color;
+	line-height: 20px; /* identical to box height */
+
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: "liga";
+
+}

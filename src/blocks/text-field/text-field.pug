@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (text-field)
+
+mixin text-field(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +text-field('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' text-field--' + modsList[i].trim();
+      }
+    }
+
+  .text-field(class=allMods)&attributes(attributes)
+    .text-field__inner
+      block

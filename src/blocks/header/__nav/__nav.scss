@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока header__nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__nav {
+  min-width: 530px;
+  max-width: 530px;
+  height: 21px;
+  margin-top: 26px;
+  margin-bottom: 23px;
+  margin-right: 30px;
+  margin-left: 30px;
+}

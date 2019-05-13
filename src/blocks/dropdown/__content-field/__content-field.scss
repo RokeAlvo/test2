@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__content-field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.dropdown__content-field {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  display: none;
+
+  border: 1px solid $input-color-focus;
+  border-top: 0;
+  border-radius: 0 0  4px 4px;
+  background-color: var(--body-bacground-color);
+}

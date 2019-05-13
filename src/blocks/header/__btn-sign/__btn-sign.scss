@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока header__btn-sign, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__btn-sign {
+	min-width: 79px;
+	height: 34px;
+	align-self: center;
+	margin-right: 20px;
+}

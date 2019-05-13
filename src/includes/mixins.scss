@@ -1,0 +1,51 @@
+@mixin font-body {
+	font-family: "Montserrat", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+@mixin font-nav-menu {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: $navigation-color;
+}
+@mixin font-input-text-title {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+
+	color: $color-Dark100;
+}
+@mixin font-input-text-placeholder {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+
+	color: $input-placeholder-text-color;
+}
+@mixin font-input-text {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-size: 14px;
+
+
+	color: $input-text-color;
+}
+
+@mixin font-input-text-select {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+
+	color: $color-Dark100;
+}
+

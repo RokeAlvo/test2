@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (navigation)
+
+mixin navigation(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +navigation('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' navigation--' + modsList[i].trim();
+      }
+    }
+
+  ul.navigation(class=allMods)&attributes(attributes)
+    li.navigation__elem.navigation__elem_bold="Home"
+    li.navigation__elem="About Us"
+    li.navigation__elem.navigation__elem_arrowed="Services"
+    li.navigation__elem="Careers"
+    li.navigation__elem="News"
+    li.navigation__elem="Documentation"
+            block

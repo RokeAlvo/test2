@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (item-arrow)
+
+mixin item-arrow(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +item-arrow('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' item-arrow--' + modsList[i].trim();
+      }
+    }
+
+  .item-arrow(class=allMods)&attributes(attributes)
+      block

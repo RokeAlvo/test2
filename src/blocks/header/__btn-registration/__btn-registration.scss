@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока header__btn-registration, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header__btn-registration {
+	align-self: center;
+	width: 101px;
+	height: 34px;
+	min-width: 101px;
+}
