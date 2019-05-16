@@ -33,7 +33,7 @@ html(lang="en")
         //- тут наша страница
         .cv-page__header
             +header('', 'standart')
-        .inner
+        .cv-page__page-main
             +dropdown("dropdown1", "Сколько помещений", "drop1", "standart")
                 +dropdown__content('Спальни')
                 +dropdown__content('Госстинные')
@@ -47,4 +47,9 @@ html(lang="en")
                         +button("очистить", "icon-link, icon-link_gray")
                     .dropdown__button-submit
                         +button("применить", "icon-link, icon-link_purple")
+            +checkbox("вот так вот", 'check1')
+                p="Можно приглаcить гостей (до 10человек)"
+
+            +checkbox("вот так вот", 'check2')
+                p="второй"
         script(src='./main.js')

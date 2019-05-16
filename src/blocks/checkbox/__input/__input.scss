@@ -1,9 +1,8 @@
-// В этом файле должны быть стили для БЭМ-блока cv-page__page-main, его элементов,
+// В этом файле должны быть стили для БЭМ-блока checkbox__input, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.cv-page__page-main {
-width: 225px;
-display: flex;
-flex-direction: column;
+.checkbox__input {
+  display: none;
+	margin: 0;
 }

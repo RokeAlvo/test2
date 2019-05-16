@@ -19,7 +19,7 @@
 .dropdown__content-select{
   align-self: flex-end;
   height: 30px;
-  width: 92px;
+  min-width: 92px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,4 +29,6 @@
 
 .dropdown__content-text{
   margin-left: 15px;
+  overflow: hidden;
+
 }
