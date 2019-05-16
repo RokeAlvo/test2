@@ -1,7 +1,8 @@
-mixin dropdown(text, idArg, mods)
+mixin dropdown(title, text, idArg, mods)
 
     //- Принимает:
     //-   text    {string} - текст заголовка и первоночального поля вывода
+    //-   text    {string} - текст первоночального поля вывода
     //-   idArg    {string} - id
     //-   mods    {string} - список модификаторов
     //- Вызов:
@@ -20,7 +21,7 @@ mixin dropdown(text, idArg, mods)
 
     .dropdown(id=idArg class=allMods)
         .dropdown__wraper
-            .dropdown__title=text
+            .dropdown__title=title
             .dropdown__output-field
                 .dropdown__button-down.dropdown__button-down_undroped
                 p.dropdown__output-field-text=text

@@ -1,13 +1,10 @@
-// В этом файле должны быть стили для БЭМ-блока button_icon-link, его элементов,
+// В этом файле должны быть стили для БЭМ-блока button_icon-link_purple, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.button_icon-link {
+.button_icon-link_purple {
 
   $block-name:                &; // #{$block-name}__element
-  border-radius: 0;
-  background-color: var(--body-bacground-color);
-  border: 0;
-  margin: 0;
-  padding: 0;
+  color: $color-purple;
+  &:hover{color: rgba($color-purple, 0.75)}
 }

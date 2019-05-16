@@ -20,8 +20,23 @@ const $ = require('jquery');
 			$(this).find('.dropdown__button-down').toggleClass('dropdown__button-down_undroped')
 				.toggleClass('dropdown__button-down_droped');
 			$(this).next('.dropdown__content-field').toggleClass('dropdown__content-field_visible');
-
 		});
+
+		// обработчик клика по кнопке ОЧИСТИТЬ
+		if($(this).hasClass('dropdown_guest')){
+			$(this).find('.dropdown__button-clear').click(function(){
+
+				// сбрасываем элементы на 0
+				$(this).closest('.dropdown').find('.dropdown__content-select-value').each(function(){
+					$(this).html(0);
+					eventValue($(this));
+				});
+				
+				// обновляем поле вывода
+
+				// сворачиваем дроп
+			});
+		};
 
 		// ховер с блока
 		$(this).hover(
@@ -42,7 +57,7 @@ const $ = require('jquery');
 				let value = $(this).closest('.dropdown__content-select').find('.dropdown__content-select-value').html();
 				value = +value - 1;
 				if (value < 0) { value = 0 };
-				$(this).closest('.dropdown__content-select').find('.dropdown__content-select-value').html(value)
+				$(this).closest('.dropdown__content-select').find('.dropdown__content-select-value').html(value);
 				eventValue($(this).closest('.dropdown__content-select').find('.dropdown__content-select-value'));
 			});
 			$(this).find('.content-select-button:last').click(function () {
@@ -68,18 +83,10 @@ const $ = require('jquery');
 			// меняем поле вывода
 
 			outputFieldValue[elem.closest('.dropdown__content-select').prev('.dropdown__content-text').text()]=value;
-			
-
 			outputField(elem.closest('.dropdown'));
 		}
 
 		function outputField(elem){
-			console.log('вызовов из оутпутфиелд  '+outputFieldValue);
-			for(var item in outputFieldValue){
-				{console.log(item+" "+outputFieldValue[item]+", ")}
-			};
-
-
 			let output;
 			if(elem.hasClass('dropdown_standart')===true){
 				output='';
@@ -99,10 +106,11 @@ const $ = require('jquery');
 					cases = [2, 0, 1, 1, 1, 2];  
 					return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
 				}
-				output = output+' '+text(output, ["гость", "гостя", "гостей"]);
+				if(output>0){output = output+' '+text(output, ["гость", "гостя", "гостей"]);}
+				else if(output===0){output = 'Сколько гостей'}
 			};
 
-			if(output==""){output='что бы тут должно быть?'}
+			if(output==""){output='Сколько помещений'}
 			elem.find('.dropdown__output-field-text').text(output);
 		}
 
