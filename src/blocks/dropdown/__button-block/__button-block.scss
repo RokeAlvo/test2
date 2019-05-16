@@ -1,12 +1,11 @@
-// В этом файле должны быть стили для БЭМ-блока header__user, его элементов,
+// В этом файле должны быть стили для БЭМ-блока dropdown__button-block, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.header__user {
+.dropdown__button-block {
 
   $block-name:                &; // #{$block-name}__element
-  @include font-nav-menu;
-  white-space: nowrap;
-  align-self: center;
-  grid-area: user;
+  display: flex;
+  justify-content: space-between;
+
 }

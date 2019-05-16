@@ -25,11 +25,12 @@ mixin header(text, mods)
     .header__margin-center
     .header__nav
       +navigation()
-    .header__rectangle
-    .header__user="Cosmin Negoita"
-    .header__btn-sign
-      +button('login', 'color_white')
-    .header__btn-registration
-      +button('register', "color_purple")
+    .header__btn
+      .header__rectangle
+      .header__user="Cosmin Negoita"
+      .header__btn-sign
+        +button('login', 'color_white')
+      .header__btn-registration
+        +button('register', "color_purple")
     .header__margin-right
       block

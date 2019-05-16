@@ -5,4 +5,8 @@
 .header__margin-center {
 
   flex-basis: 46%;
+  @media screen and (max-width: $sc2){
+    flex-basis: 0%;
+}
+
 }

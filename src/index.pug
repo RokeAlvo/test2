@@ -12,8 +12,17 @@ html(lang="en")
         .cv-page__header
             +header('', 'standart')
         .inner
-            +dropdown({
-                        id: 're',
-                        mix: 'button',
-                        mixArg: '"txt", "purple"' })
+            +dropdown("dropdown","drop1", "standart")
+                +dropdown__content('Спальни')
+                +dropdown__content('Госстинные')
+                +dropdown__content('Ванные комнаты')
+            +dropdown("dropdown","drop2", "guest")
+                +dropdown__content('Взрослые')
+                +dropdown__content('Дети')
+                +dropdown__content('Младенцы')
+                .dropdown__button-block
+                    .dropdown__button-clear
+                        +button("очистить", "icon-link")
+                    .dropdown__button-clear
+                        +button("очистить", "icon-link")
         script(src='./main.js')

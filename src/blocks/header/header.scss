@@ -4,7 +4,15 @@
 
 .header {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: space-between;
     vertical-align: center;
     align-content: center;
+    @media screen and (max-width: $sc2){
+        flex-basis: 0;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+    }
 }

@@ -3,7 +3,7 @@
 const $ = require('jquery');
 
 (function () {
-	$('.dropdown__wraper').each(function () {
+	$('.dropdown').each(function () {
 		//переменная для поля вывода
 		var outputFieldValue = {};
 		// заполняем поле вывода
@@ -70,7 +70,7 @@ const $ = require('jquery');
 			outputFieldValue[elem.closest('.dropdown__content-select').prev('.dropdown__content-text').text()]=value;
 			
 
-			outputField(elem.closest('.dropdown__wraper'));
+			outputField(elem.closest('.dropdown'));
 		}
 
 		function outputField(elem){
@@ -80,11 +80,28 @@ const $ = require('jquery');
 			};
 
 
-			let output="";
-			for(var item in outputFieldValue){
-				if(+outputFieldValue[item]>0){output=output+item+" "+outputFieldValue[item]+", "}
-				
+			let output;
+			if(elem.hasClass('dropdown_standart')===true){
+				output='';
+				for(var item in outputFieldValue){
+					if(+outputFieldValue[item]>0){output=output+item+" "+outputFieldValue[item]+", "}
+					
+				};
 			};
+			if(elem.hasClass('dropdown_guest')===true){
+				output=0;
+				for(var item in outputFieldValue){
+					// if(+outputFieldValue[item]>0){output=output+item+" "+outputFieldValue[item]+", "}
+					output=output+Number(outputFieldValue[item]);
+				};
+				// функция определения окончания
+				let text=function (number, titles) {  
+					cases = [2, 0, 1, 1, 1, 2];  
+					return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+				}
+				output = output+' '+text(output, ["гость", "гостя", "гостей"]);
+			};
+
 			if(output==""){output='что бы тут должно быть?'}
 			elem.find('.dropdown__output-field-text').text(output);
 		}

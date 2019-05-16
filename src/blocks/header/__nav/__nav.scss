@@ -10,4 +10,8 @@
   margin-bottom: 23px;
   margin-right: 30px;
   margin-left: 30px;
+  grid-area: nav;
+  @media screen and (max-width: $sc2){
+    order: 1;
+  }
 }
