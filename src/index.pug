@@ -49,13 +49,17 @@ html(lang="en")
                         +button("применить", "icon-link, icon-link_purple")
             +checkbox("вот так вот", 'check1')
                 p="Можно приглаcить гостей (до 10человек)"
-
             +checkbox("вот так вот", 'check2')
                 p="второй"
-            +dropdown("expanded checkbox list","expanded checkbox list", "drop3", "standart")
+            +expand-checkbox-list("expandable checkbox list", "expand-checkbox-list1", "standart")
                 +checkbox("вот так вот", 'check4')
                     p="Можно приглаcить гостей (до 10человек)"
                 +checkbox("вот так вот", 'check5')
+                    p="второй"
+            +expand-checkbox-list("expandable checkbox list", "expand-checkbox-list2", "standart")
+                +checkbox("вот так вот", 'check6')
+                    p="Можно приглаcить гостей (до 10человек)"
+                +checkbox("вот так вот", 'check7')
                     p="второй"
 
         script(src='./main.js')

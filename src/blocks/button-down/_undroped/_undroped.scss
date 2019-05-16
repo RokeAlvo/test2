@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__buttion-down_undroped, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button-down_undroped {
+	&::after {
+		display: flex;
+		align-items: center;
+		content: "expand_more";
+		text-align: center;
+		font-family: "Material Icons";
+		font-weight: normal;
+		font-style: normal;
+		font-size: 24px; /* Preferred icon size */
+		text-transform: none;
+		letter-spacing: normal;
+		word-wrap: normal;
+		white-space: nowrap;
+		direction: unset;
+		// line-height: 44px;
+	}
+}

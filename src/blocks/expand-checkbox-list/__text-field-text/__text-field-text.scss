@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока expand-checkbox-list__text-field-text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.expand-checkbox-list__text-field-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  // line-height: 15px;
+}

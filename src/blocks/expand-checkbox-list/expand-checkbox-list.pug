@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (expand-checkbox-list)
+
+mixin expand-checkbox-list(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +expand-checkbox-list('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' expand-checkbox-list_' + modsList[i].trim();
+      }
+    }
+
+  .expand-checkbox-list(class=allMods)&attributes(attributes)
+    .expand-checkbox-list__inner
+      .expand-checkbox-list__text-field
+        h3.expand-checkbox-list__text-field-text=text
+        .button-down.button-down_undroped
+      .expand-checkbox-list__content-wraper
+        .expand-checkbox-list__content.expand-checkbox-list__content_hiden
+          block

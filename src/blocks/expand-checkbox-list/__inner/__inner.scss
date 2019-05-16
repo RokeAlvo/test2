@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока expand-checkbox-list__inner, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.expand-checkbox-list__inner {
+
+  $block-name:                &; // #{$block-name}__element
+}

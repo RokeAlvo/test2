@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown__buttion-down, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button-down {
+  display: flex;
+  justify-content: flex-end;
+  width: 44px;
+  color: $color-Dark50;
+  height: 44px
+}
