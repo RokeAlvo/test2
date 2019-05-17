@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (radio)
+
+mixin radio(id, name, mods)
+
+  //- Принимает:
+  //-   name    {string} - name
+  //-   id    {string} - id
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +radio('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' radio_' + modsList[i].trim();
+      }
+    }
+
+  .radio(class=allMods)&attributes(attributes)
+      input(type="radio", name=name id=id).radio__input
+      label(for=id).radio__img
+      label(for=id).radio__text
+        block
+

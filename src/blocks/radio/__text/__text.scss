@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока radio__text, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.radio__text {
+  line-height: 20px;
+  color: $color-Dark50;
+  margin-left: 10px;
+}
+
+.radio__input:checked~.radio__text {
+  color: $color-Dark75;
+
+}

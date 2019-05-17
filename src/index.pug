@@ -64,6 +64,16 @@ html(lang="en")
             +checkbox('' ,'check3', 'reach')
                 p="Будут гости!"
                 p="Можно приглаcить гостей (до 10человек)"
+            div(style="display: flex")
+                +radio('radio1','radioblock1')
+                    span='Мужчина'
+                +radio('radio2','radioblock1')
+                    span='Женщина'
+            +radio('radio3','radioblock2')
+                span='Большой'
+            +radio('radio4','radioblock2')
+                span='Маленький'
+
 
 
         script(src='./main.js')

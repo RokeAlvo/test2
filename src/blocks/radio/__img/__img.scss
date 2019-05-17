@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока radio__img, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.radio__img {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+border: 1px solid $color-Dark25;
+line-height: 20px;
+}
+
+.radio__input:checked+.radio__img {
+  border: 1px solid $color-purple;
+}
+.radio__input:checked+.radio__img::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $color-purple;
+  border-radius: 6px;
+  margin: 3px auto;
+}
