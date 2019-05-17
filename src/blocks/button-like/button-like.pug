@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (button-like)
+
+mixin button-like(textMod, mods)
+
+  //- Принимает:
+  //-   textMod    {string} - модификаторы текста внутри
+  //-   mods    {string} - список модификаторов для кнопки
+  //- Вызов:
+        +button-like('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' button-like_' + modsList[i].trim();
+      }
+    }
+    var allTextMods  = '';
+    if(typeof(textMod) !== 'undefined' && textMod) {
+      var modsList = textMod.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allTextMods = allTextMods + ' button-like__value_' + modsList[i].trim();
+      }
+    }
+    var allHartMods  = '';
+    if(typeof(textMod) !== 'undefined' && textMod) {
+      var modsList = textMod.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allHartMods = allHartMods + ' button-like__hart_' + modsList[i].trim();
+      }
+    }
+
+  .button-like(class=allMods)&attributes(attributes)
+    .button-like__inner
+      +button('', mods)
+        .button-like__content
+          span.button-like__hart(class=allHartMods)
+          span.button-like__value(class=allTextMods)=2
+          block
+

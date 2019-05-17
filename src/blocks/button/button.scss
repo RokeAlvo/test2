@@ -6,7 +6,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 22px;
+  box-sizing: border-box;
+  border-radius: 999999px;
   cursor: pointer;
   font-size: 12px;
   font-family: $font-family-button;
@@ -14,6 +15,7 @@
   font-weight: bold;
   text-transform: uppercase;
   outline: none;
+  text-align: center;
 
   // &:hover{opacity: 0.5}
 }

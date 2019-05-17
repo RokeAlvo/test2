@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока button-like__content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button-like__content {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

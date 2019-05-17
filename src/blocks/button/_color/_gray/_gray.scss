@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока button_color_gray, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button_color_gray {
+  $border-width: 1px;
+  background-color: #ffffff;
+  border: $border-width solid $color-Dark25;
+  // border-image: linear-gradient(#BC9CFF , #8BA4F9);
+  // border-image-slice: 1;
+  background-clip: padding-box;
+  box-sizing: border-box;
+
+}

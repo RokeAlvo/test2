@@ -9,16 +9,35 @@ $border-width: 2px;
   // border-image-slice: 1;
   background-clip: padding-box;
   color: $color-purple;
+  box-sizing: border-box;
 }
+.button_color_white_min{
+  border: 1px solid transparent;
+  top: -2px;
+  box-sizing: border-box;
+  top: -3px;
+}
+
 
 .button_color_white::before{
   position: absolute;
   top: -$border-width; bottom: -$border-width;
   left: -$border-width; right: -$border-width;
   z-index: -1;
-  border-radius: 22px;
+  border-radius: 99999px;
   background: $purple-gradient;
   content: '';
+  box-sizing: border-box;
+}
+.button_color_white_min::before{
+  position: absolute;
+  top: -1px; bottom: -1px;
+  left: -1px; right: -1px;
+  z-index: -1;
+  border-radius: 99999px;
+  background: $purple-gradient;
+  content: '';
+  box-sizing: border-box;
 }
 
 .button_color_white:hover::after{
@@ -26,9 +45,23 @@ $border-width: 2px;
   position: absolute;
   top: -$border-width; bottom: -$border-width;
   left: -$border-width; right: -$border-width;
-  border-radius: 22px;
+  border-radius: 9999px;
   background-color:rgba($color: white, $alpha: 0.5);
   opacity: 1;
+  box-sizing: border-box;
+  top: -3px;
+
+}
+.button_color_white_min:hover::after{
+  content: '';
+  position: absolute;
+  top: -1px; bottom: -1px;
+  left: -1px; right: -1px;
+  border-radius: 9999px;
+  background-color:rgba($color: white, $alpha: 0.5);
+  opacity: 1;
+  box-sizing: border-box;
+  top: -1px;
 
 }
 
@@ -40,5 +73,14 @@ $border-width: 2px;
   background-clip: padding-box;
   color: $color-purple;
   opacity: 1;
+  box-sizing: border-box;
 
+
+}
+.button_color_white_min:hover{
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  
+  // border-image: linear-gradient(#BC9CFF , #8BA4F9);
+  // border-image-slice: 1;
 }

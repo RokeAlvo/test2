@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока button-like__value, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button-like__value_purple {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height */
+  text-align: center;
+  
+  color: $color-purple;
+  
+}
+.button-like__value_gray {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height */
+  text-align: center;
+  
+  color: $color-Dark25;
+  
+}

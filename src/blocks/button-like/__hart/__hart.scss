@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока button-like__hart, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button-like__hart_purple {
+  display: flex;
+  align-items: center;
+  &::before{
+    content: 'favorite';
+    font-family: "Material Icons";
+    text-transform: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    align-items: center;
+    text-align: center;
+    color: $color-purple;
+  
+  }
+}
+.button-like__hart_gray {
+  display: flex;
+  align-items: center;
+  &::before{
+    content: 'favorite_border';
+    font-family: "Material Icons";
+    text-transform: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    align-items: center;
+    text-align: center;
+    color: $color-Dark25;
+  
+  }
+}

@@ -1,4 +1,5 @@
 @import "../blocks/button/button.scss";
+@import "../blocks/button/_color/_gray/_gray.scss";
 @import "../blocks/button/_color/_purple/_purple.scss";
 @import "../blocks/button/_color/_white/_white.scss";
 @import "../blocks/button/_icon-link/_gray/_gray.scss";
@@ -7,6 +8,11 @@
 @import "../blocks/button-down/button-down.scss";
 @import "../blocks/button-down/_droped/_droped.scss";
 @import "../blocks/button-down/_undroped/_undroped.scss";
+@import "../blocks/button-like/button-like.scss";
+@import "../blocks/button-like/__content/__content.scss";
+@import "../blocks/button-like/__hart/__hart.scss";
+@import "../blocks/button-like/__inner/__inner.scss";
+@import "../blocks/button-like/__value/__value.scss";
 @import "../blocks/checkbox/checkbox.scss";
 @import "../blocks/checkbox/_reach/_reach.scss";
 @import "../blocks/checkbox/__inner/__inner.scss";
