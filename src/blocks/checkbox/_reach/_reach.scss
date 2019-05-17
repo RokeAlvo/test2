@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока checkbox_reach, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.checkbox_reach {
+
+  $block-name:                &; // #{$block-name}__element
+}

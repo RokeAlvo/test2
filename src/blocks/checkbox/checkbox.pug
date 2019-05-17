@@ -5,7 +5,7 @@ mixin checkbox(text, id, mods)
   //- Принимает:
   //-   text    {string} - текст
   //-   id    {string} - id
-  //-   mods    {string} - список модификаторов
+  //-   mods    {string} - список модификаторов: reach - стилизует контент - первый абзац жирный, второй 12рх
   //- Вызов:
     +checkbox('Текст', 'id' 'some-mod')
 
@@ -15,7 +15,7 @@ mixin checkbox(text, id, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' checkbox--' + modsList[i].trim();
+        allMods = allMods + ' checkbox_' + modsList[i].trim();
       }
     }
 
