@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока toggle__input, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.toggle__input {
+  display: block;
+  width: 40px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid $color-Dark25;
+  border-radius: 10px;
+  &:after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: $color-Dark25;
+    margin: 3px 0 3px 3px;
+  }
+}
+.toggle input:checked ~.toggle__input {
+  border: 1px solid $color-purple;
+  &::after{
+    background-image: $purple-gradient;
+    margin: 3px 0px 3px 23px;
+
+  }
+} 
+
+

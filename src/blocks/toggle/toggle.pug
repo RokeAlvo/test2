@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (toggle)
+
+mixin toggle(id, mods)
+
+  //- Принимает:
+  //-   id    {string} - id
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +toggle('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' toggle_' + modsList[i].trim();
+      }
+    }
+
+  .toggle(class=allMods)&attributes(attributes)
+    input(type="checkbox", id=id).
+    label(for=id).toggle__input
+    label(for=id).toggle__text
+      block
