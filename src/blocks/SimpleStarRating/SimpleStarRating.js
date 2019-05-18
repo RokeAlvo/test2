@@ -22,8 +22,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
- */
+ */const jquery = require("jquery");
+window.$ = window.jQuery = jquery; // notice the definition of global variables here
+require("jquery-ui");
 
+$(function(){
 var SimpleStarRating = (function () {
     function SimpleStarRating(target) {
         function attr(name, d) {
@@ -161,3 +164,4 @@ var SimpleStarRating = (function () {
         });
     }
 }());
+});

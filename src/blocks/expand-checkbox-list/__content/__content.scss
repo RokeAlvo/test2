@@ -5,9 +5,11 @@
 .expand-checkbox-list__content {
   display: block;
   position: absolute;
-  background-color: var(--body-bacground-color)
+  background-color: var(--body-bacground-color);
+  z-index: 9;
 }
 .expand-checkbox-list__content-wraper{
   display: block;
   position: relative;
+  background-color: var(--body-bacground-color)
 }

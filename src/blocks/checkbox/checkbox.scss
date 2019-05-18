@@ -3,6 +3,6 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .checkbox {
-
+  background-color: var(--body-bacground-color);
   $block-name:                &; // #{$block-name}__element
 }

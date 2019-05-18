@@ -1,6 +1,6 @@
 /* global document */
 
-const $ = require('jquery');
+ const $ = require('jquery');
 
 (function () {
 	$('.dropdown').each(function () {
