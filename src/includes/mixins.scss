@@ -4,6 +4,7 @@
 	font-size: 14px;
 	line-height: 24px;
 	color: $color-Dark75;
+	text-transform: none;
 }
 
 @mixin font-nav-menu {
@@ -50,3 +51,13 @@
 	color: $color-Dark100;
 }
 
+@mixin font-h3 {
+	font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+text-transform: uppercase;
+
+color: $color-Dark100;
+
+}

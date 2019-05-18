@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока bullet-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.bullet-list {
+  margin: 0;
+  & h3{
+    margin: 0;
+    line-height: 15px;
+    margin-bottom: 6px;
+  }
+  & ol{
+    @include font-h3;
+    margin: 0;
+    margin-bottom: 6px;
+    padding: 0;
+  }
+  & li{
+    padding: 0;
+    @include font-body;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    list-style-type: none;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+  & li::before{
+    content: '';
+    display: block;
+    position: relative;
+    width: 10px;
+    min-width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $color-Dark25;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока bullet-list__wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.bullet-list__wrap {
+  display: block;
+  width: 292px;
+  height: 147px;
+  margin-top: 5px;
+  border: 1px solid black;
+}
