@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока range-slider__output, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.range-slider__output {
+  display: block;
+  font-size: 12px;
+  color: $color-Dark50;
+}

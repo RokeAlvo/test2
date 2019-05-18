@@ -3,7 +3,7 @@ window.$ = window.jQuery = jquery; // notice the definition of global variables 
 require("./../../jquery-ui-1.12.1/jquery-ui");
 
 $(function () {
-    $(".range-slider__ui").each(function(item){
+    $(".range-slider__ui").each(function(i,item){
         $(this).slider({
             min: 0,
             max: 5000,
@@ -11,7 +11,7 @@ $(function () {
             range: true,
             animate: "fast",
             slide: function (event, ui) {
-                $("#range-slider__output").val(ui.values[0]+'р - '+ui.values[1]+'р');
+                $(item).closest('.range-slider__waper').find(".range-slider__output").text(ui.values[0]+'₽ - '+ui.values[1]+'₽');
             }
         });
         // $(".polzunok-input-5-left").val($(".polzunok-5").slider("values", 0));

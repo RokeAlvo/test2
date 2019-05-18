@@ -86,10 +86,10 @@ html(lang="en")
             <input type="text" name="date" id="datepicker">
 
             .range-slider__waper
-            h3='range-slider'
-            input(type='text' id="range-slider__output")
-            
-            +range-slider()
+                .range-slider__output-wraper
+                    h3.range-slider__title='range-slider'
+                    .range-slider__output="0"
+                +range-slider()
 
 
 

@@ -1,12 +1,12 @@
-// В этом файле должны быть стили для БЭМ-блока range-slider__waper, его элементов,
+// В этом файле должны быть стили для БЭМ-блока range-slider__output-wraper, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.range-slider__waper {
-  width: 266px;
-  height: 47px;
-  border: 1px solid black;
+.range-slider__output-wraper {
+
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
 }
