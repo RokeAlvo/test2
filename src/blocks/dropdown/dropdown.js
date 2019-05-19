@@ -10,12 +10,6 @@
 		$(this).find('.dropdown__content-text').each(function (i) {
 			outputFieldValue[$(this).text()] = $(this).next().find('.dropdown__content-select-value').text();
 		});
-		// console.log(outputFieldValue);
-		for (var item in outputFieldValue) {
-			{
-				console.log(item + " " + outputFieldValue[item] + ", ")
-			}
-		};
 
 		// обработчик клика на поле
 		$(this).find('.dropdown__output-field').click(function () {

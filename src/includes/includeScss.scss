@@ -1,3 +1,5 @@
+@import "../blocks/bullet-list/bullet-list.scss";
+@import "../blocks/bullet-list/__wrap/__wrap.scss";
 @import "../blocks/button/button.scss";
 @import "../blocks/button/_color/_gray/_gray.scss";
 @import "../blocks/button/_color/_purple/_purple.scss";
@@ -21,8 +23,11 @@
 @import "../blocks/checkbox/__text/__text.scss";
 @import "../blocks/content-select-button/content-select-button.scss";
 @import "../blocks/cv-page/cv-page.scss";
+@import "../blocks/cv-page/__left/__left.scss";
 @import "../blocks/cv-page/__page-header/__page-header.scss";
 @import "../blocks/cv-page/__page-main/__page-main.scss";
+@import "../blocks/cv-page/__right/__right.scss";
+@import "../blocks/datepicker/datepicker.scss";
 @import "../blocks/dropdown/dropdown.scss";
 @import "../blocks/dropdown/__button-block/__button-block.scss";
 @import "../blocks/dropdown/__button-clear/__button-clear.scss";
@@ -44,6 +49,7 @@
 @import "../blocks/expand-checkbox-list/__text-field/__text-field.scss";
 @import "../blocks/expand-checkbox-list/__text-field-text/__text-field-text.scss";
 @import "../blocks/expand-checkbox-list/__content/_hiden/_hiden.scss";
+@import "../blocks/form-select/form-select.scss";
 @import "../blocks/header/header.scss";
 @import "../blocks/header/_logged/_logged.scss";
 @import "../blocks/header/_standart/standart.scss";

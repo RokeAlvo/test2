@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-select)
+
+mixin form-select(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +form-select('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' form-select__' + modsList[i].trim();
+      }
+    }
+
+  .form-select(class=allMods)&attributes(attributes)
+    h1.form-select__title='Найдём номера под ваши пожелания'
+    .datepicker
+    block

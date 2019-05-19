@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (datepicker)
+
+mixin datepicker(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +datepicker('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' datepicker--' + modsList[i].trim();
+      }
+    }
+
+  .datepicker(class=allMods)&attributes(attributes)

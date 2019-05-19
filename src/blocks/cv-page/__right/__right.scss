@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока cv-page__right, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cv-page__right {
+
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #E5E5E5;
+  align-items: center;
+  padding-top: 5px;
+}

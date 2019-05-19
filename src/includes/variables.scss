@@ -89,6 +89,8 @@ $font-family-button: 'Montserrat', sans-serif;
 
 
 $purple-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$purple-gradient25: linear-gradient(180deg, rgba( #BC9CFF, 0.25) 0%, rgba( #8BA4F9, 0.25)  100%);
+
 $color-purple: #BC9CFF;
 $color-Dark100: #1F2041;
 $color-Dark75: rgba($color-Dark100, 0.75);
@@ -100,6 +102,8 @@ $input-color-focus: $color-Dark50;
 $input-text-color: $color-Dark75;
 $input-color: $color-Dark25;
 $sc2: 940px;
+
+$border-radius: 4px;
 
 :root {
     --body-bacground-color: white;
