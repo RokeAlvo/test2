@@ -1,0 +1,249 @@
+// В этом файле должны быть стили для БЭМ-блока datepicker, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+// @import "./../../pickmeup/pickmeup.scss";
+.datepicker {
+	$block-name: &; // #{$block-name}__element
+}
+/**
+ * @package PickMeUp
+ * @author  Nazar Mokrynskyi <nazar@mokrynskyi.com>
+ * @license 0BSD
+ */
+
+$color: #eee !default;
+$background-hover: transparent !default;
+$color-hover: #88c5eb !default;
+$nav-color: $color !default;
+$nav-color-hover: $color-hover !default;
+$not-in-month: $color-Dark25;
+$not-in-month-hover: #999 !default;
+$disabled: #333 !default;
+$selected: #ffffff;
+$selected-background: $purple-gradient;
+$not-in-month-selected-background: #17384d !default;
+$day-of-week: $color-purple;
+$today-background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$today-color: #ffffff;
+$font-size-nav: 19px;
+.datepicker {
+	position: absolute;
+	width: 320px;
+	z-index: 11;
+}
+.datepicker .pickmeup {
+	background-color: var(--body-bacground-color);
+	display: inline-block;
+	width: 100%;
+	position: absolute;
+	touch-action: manipulation;
+
+	border-radius: $border-radius;
+	border: 1px solid $color-Dark25;
+
+	box-sizing: border-box;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+	@include font-body_s;
+	line-height: 3.35em;
+
+	* {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	&.pmu-flat {
+		position: relative;
+	}
+
+	&.pmu-hidden {
+		display: none;
+	}
+
+	.pmu-instance {
+		display: inline-block;
+		// height: 13.8em;
+		padding: 6.25%;
+		text-align: center;
+		width: 100%;
+
+		.pmu-button {
+			cursor: pointer;
+			outline: none;
+			text-decoration: none;
+		}
+
+		.pmu-today {
+			background: $today-background;
+			border-radius: 99999px;
+			color: $today-color;
+		}
+
+		.pmu-button:hover {
+			background: $background-hover;
+			color: $color-hover;
+		}
+
+		.pmu-not-in-month {
+			color: $not-in-month;
+		}
+
+		.pmu-disabled,
+		.pmu-disabled:hover {
+			color: $disabled;
+			cursor: default;
+		}
+
+		.pmu-selected {
+			// background: red;
+			// color: $selected;
+			background: $selected-background;
+			color: $selected;
+			border-radius: 99999px;
+		}
+
+		.pmu-start-select {
+			background: $selected-background;
+			color: $selected;
+			border-radius: 99999px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 3.312em;
+				height: 3.35em;
+				background: $purple-gradient25;
+				border-radius: 50% 0 0 50%;
+			}
+		}
+
+		.pmu-end-select {
+			display: flex;
+			background: $selected-background;
+			color: $selected;
+			border-radius: 99999px;
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 3.312em;
+				height: 3.35em;
+				background: $purple-gradient25;
+				border-radius: 0 50% 50% 0;
+			}
+		}
+
+		.pmu-body-select {
+			display: flex;
+			background: $purple-gradient25;
+			border-radius: 0;
+			color: $color-Dark50;
+		}
+
+		// .pmu-not-in-month.pmu-selected {
+		// 	background: $not-in-month-selected-background;
+		// }
+
+		nav {
+			color: $nav-color;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			justify-content: space-between;
+			line-height: 1.263em;
+			@include font-h2;
+			margin-bottom: 1.579em;
+			height: 1.263em;
+
+			*:first-child :hover {
+				color: $nav-color-hover;
+			}
+
+			.pmu-prev,
+			.pmu-next {
+				display: none;
+				width: 1em;
+				font-family: "Material Icons";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.263em;
+				line-height: 1em;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				height: 1em;
+				color: $color-purple;
+			}
+			.pmu-month {
+				// width: 14em;
+			}
+		}
+
+		.pmu-years,
+		.pmu-months {
+			* {
+				display: inline-block;
+				line-height: 3.6em;
+				width: 3.5em;
+			}
+		}
+
+		.pmu-day-of-week {
+			@include font-body_s;
+			line-height: 3.35em;
+			color: $day-of-week;
+			display: flex;
+			justify-content: space-between;
+			cursor: default;
+			margin: 0;
+			height: 3.35em;
+		}
+
+		.pmu-day-of-week,
+		.pmu-days {
+			* {
+				display: inline-block;
+				line-height: 3.35em;
+				width: 14.28%;
+			}
+		}
+
+		.pmu-day-of-week * {
+			line-height: 3.35em;
+		}
+	}
+
+	.pmu-instance:first-child .pmu-prev,
+	.pmu-instance:last-child .pmu-next {
+		display: block;
+		font-family: "Material Icons";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.263em;
+		line-height: 1em;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		height: 1em;
+		color: $color-purple;
+	}
+
+	.pmu-instance:first-child,
+	.pmu-instance:last-child {
+		.pmu-month {
+			// width: 13em;
+		}
+	}
+
+	.pmu-instance:first-child:last-child .pmu-month {
+		// width: 12em;
+	}
+
+	&:not(.pmu-view-days) .pmu-days,
+	&:not(.pmu-view-days) .pmu-day-of-week,
+	&:not(.pmu-view-months) .pmu-months,
+	&:not(.pmu-view-years) .pmu-years {
+		display: none;
+	}
+}

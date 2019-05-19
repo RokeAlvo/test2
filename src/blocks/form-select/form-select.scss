@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока form-select, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-select {
+  display: block;
+  position: absolute;
+  width: 380px;
+  min-width: 380px;
+  height: 374px;
+  background-color: var(--body-bacground-color);
+  padding: 40px 30px 30px 30px;
+  box-sizing: border-box;
+  & h1 {
+    margin: 0px;
+    line-height: 30px;
+  }
+}
