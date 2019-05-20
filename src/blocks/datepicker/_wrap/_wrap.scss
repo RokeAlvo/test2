@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока datepicker_wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.datepicker_wrap {
+	position: absolute;
+	width: 320px;
+  z-index: 11;
+  background-color: var(--body-bacground-color);
+	border-radius: $border-radius;
+	border: 1px solid $color-Dark25;
+
+	box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 5%;
+
+}

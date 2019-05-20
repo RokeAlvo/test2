@@ -18,4 +18,11 @@ mixin datepicker(text, mods)
       }
     }
 
-  .datepicker(class=allMods)&attributes(attributes)
+  .datepicker_wrap
+    .datepicker(class=allMods)&attributes(attributes)
+    .datepicker__button-block
+      .datepicker__button-clear
+          +button("очистить", "icon-link, icon-link_gray")
+      .datepicker__button-submit
+          +button("применить", "icon-link, icon-link_purple")
+    block

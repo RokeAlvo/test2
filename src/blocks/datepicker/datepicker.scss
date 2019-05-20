@@ -27,22 +27,13 @@ $today-background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $today-color: #ffffff;
 $font-size-nav: 19px;
 .datepicker {
-	position: absolute;
-	width: 320px;
-	z-index: 11;
 }
 .datepicker .pickmeup {
-	background-color: var(--body-bacground-color);
 	display: inline-block;
 	width: 100%;
 	position: absolute;
 	touch-action: manipulation;
 
-	border-radius: $border-radius;
-	border: 1px solid $color-Dark25;
-
-	box-sizing: border-box;
-	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
 	@include font-body_s;
 	line-height: 3.35em;
@@ -63,7 +54,7 @@ $font-size-nav: 19px;
 	.pmu-instance {
 		display: inline-block;
 		// height: 13.8em;
-		padding: 6.25%;
+		// padding: 6.25%;
 		text-align: center;
 		width: 100%;
 
