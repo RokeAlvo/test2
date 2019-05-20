@@ -1,0 +1,40 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-registration)
+
+mixin form-registration(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +form-registration('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' form-registration_' + modsList[i].trim();
+      }
+    }
+
+  .form-registration(class=allMods)&attributes(attributes)
+    h1.form-registration__title="Регистрация аккаунта"
+    .form-registration__input-name
+      +input-text("text", "Имя")
+    .form-registration__input-surname
+      +input-text("text", "Фамилия")
+    .form-registration__radio-gender
+      +radio('radio_men','radioblock_gender')
+        span='Мужчина'
+      +radio('radio_women','radioblock_gender')
+        span='Женщина'
+    .form-registration__input-birthday
+      +range-date-select('Дата рождения','','single')
+    .form-registration__registration-date
+    .form-registration__toggle_subscribe
+    .form-registration__submit
+    .form-registration__login
+
+
+      block

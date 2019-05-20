@@ -3,35 +3,19 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .input-text__input {
-	width: 320px;
-	height: 44px;
-	border-color: $input-color;
-	border-width: 1px;
-	border-radius: 4px;
-  outline: none;
-  @include font-input-text;
-  padding-left: 15px;
-
-	&:hover {
-		border-color: $input-color-focus;
-	}
+	@include font-body;
+	width: calc(100% - 15 / 14 * 2em);
+	border: 0;
+	padding: 0;
+	line-height: 18/14 * 1em;
+	margin: 13/14 * 1em 15/14 * 1em 13/14 * 1em 15/14 * 1em;
+	box-sizing: border-box;
+	color: $color-Dark25; //TODO проверить цвет шрифта инпутТекст
+	&:hover,
 	&:focus {
-		border-color: $input-color-focus;
-	}
-	&::placeholder {
-		@include font-input-text-placeholder;
-	}
-
-	&::-webkit-input-placeholder {
-		@include font-input-text-placeholder;
-	}
-	&::-moz-placeholder {
-		@include font-input-text-placeholder;
-	} /* Firefox 19+ */
-	&:-moz-placeholder {
-		@include font-input-text-placeholder;
-	} /* Firefox 18- */
-	&:-ms-input-placeholder {
-		@include font-input-text-placeholder;
+		line-height: 24/14 * 1em;
+		margin-top: 12/14 * 1em;
+		margin-bottom: 8/14 * 1em;
+		color: $color-Dark75;
 	}
 }

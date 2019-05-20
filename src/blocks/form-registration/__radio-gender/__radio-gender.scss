@@ -1,0 +1,12 @@
+// В этом файле должны быть стили для БЭМ-блока form-registration__radio-gender, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-registration__radio-gender {
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 24/14*1em;
+  margin-bottom: 20/14*1em;
+}

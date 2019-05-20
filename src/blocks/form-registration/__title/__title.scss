@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока form-registration__title, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-registration__title {
+
+  line-height: calc(30/24 * 1em);
+  margin: 0;
+  margin-bottom: calc(20/24 * 1em)
+}

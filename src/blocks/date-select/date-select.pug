@@ -1,0 +1,26 @@
+//- Все примеси в этом файле должны начинаться c имени блока (date-select)
+
+mixin date-select(title, mods)
+
+  //- Принимает:
+  //-   title    {string} - Заголовок над полем ввода
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +date-select('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' date-select--' + modsList[i].trim();
+      }
+    }
+
+  .date-select(class=allMods)&attributes(attributes)
+    .date-select__input-date
+      .date-select__input-date-title=title
+        +input-date()
+    +datepicker()
+    block

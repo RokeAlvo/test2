@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока input-text__wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-text__wrap {
+	background: var(--body-bacground-color);
+	border: 1px solid $color-Dark25;
+	box-sizing: border-box;
+	border-radius: calc(4 / 14 * 1em);
+	&:hover {
+		border-color: $color-Dark50;
+	}
+}

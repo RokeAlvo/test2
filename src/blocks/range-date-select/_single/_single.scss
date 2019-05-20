@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока range-date-select_single, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.range-date-select_single {
+
+  .range-date-select__input-date-end{display:none}
+}

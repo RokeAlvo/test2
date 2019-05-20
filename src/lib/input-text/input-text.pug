@@ -1,0 +1,47 @@
+mixin input-text(props)
+
+  //- Принимает:
+  //-   props {
+  //-     title: ''         {string} - текст с названием (выводится над полем)
+  //-     isTextarea: false {bool}   - флаг input/textarea
+  //-     helpText: ''      {string} - пояснение под полем
+  //-     mods: ''          {string} - модификаторы блока
+  //-     val: ''           {string} - текст в поле
+  //-     attrs:            {object} - любые атрибуты для input/textarea
+  //-       type:           {string}
+  //-       placeholder:    {string}
+  //- Вызов:
+        +input-text({
+          title: 'Название',
+          isTextarea: true,
+          helpText: 'Подсказка',
+          mods: '',
+          val: '',
+          attrs: {
+            name: 'comment',
+          }
+        })
+
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' input-text_' + modsList[i].trim();
+      }
+    }
+
+  label.input-text(class=allMods)&attributes(attributes)
+    if(typeof(props.title) !== 'undefined' && props.title)
+    .input-text__name!= props.title
+    .input-text__input-wrap
+      if(typeof(props.isTextarea) !== 'undefined' && props.isTextarea)
+        textarea.input-text__input&attributes(props.attrs)= props.val
+      else
+        input.input-text__input(type=(typeof(props.attrs) !== 'undefined' && props.attrs.type) ? props.attrs.type : 'text', value=props.val)&attributes(props.attrs)
+      if(typeof(props.helpText) !== 'undefined' && props.helpText)
+        span.input-text__help-text!= props.helpText
+      block
