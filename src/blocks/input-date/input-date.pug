@@ -1,12 +1,12 @@
-//- Все примеси в этом файле должны начинаться c имени блока (buttion)
+//- Все примеси в этом файле должны начинаться c имени блока (input-date)
 
-mixin button(text, mods)
+mixin input-date(text, mods)
 
   //- Принимает:
   //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +buttion('Текст', 'some-mod, mod2')
+        +input-date('Текст', 'some-mod')
 
   -
     // список модификаторов
@@ -14,9 +14,11 @@ mixin button(text, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' button_' + modsList[i].trim();
+        allMods = allMods + ' input-date_' + modsList[i].trim();
       }
     }
 
-  button.button(class=allMods type="button")=text
-    block
+  .input-date(class=allMods)&attributes(attributes)
+    input.input-date__input-field
+    .input-date__btn
+  block

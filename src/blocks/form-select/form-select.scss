@@ -13,6 +13,7 @@
   box-sizing: border-box;
   & h1 {
     margin: 0px;
-    line-height: 30px;
+    line-height: calc(30 / 24 * 1em);
+    margin-bottom: calc(20/24 * 1em); 
   }
 }

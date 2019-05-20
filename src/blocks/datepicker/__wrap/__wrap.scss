@@ -2,7 +2,7 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.datepicker_wrap {
+.datepicker__wrap {
 	position: absolute;
 	width: 320px;
   z-index: 11;
@@ -13,5 +13,7 @@
 	box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   padding: 5%;
-
+}
+.datepicker__wrap_hiden{
+	display: none;
 }

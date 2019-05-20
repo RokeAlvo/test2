@@ -7,14 +7,14 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
-  --height: 44px;
+  --height: calc(44/14 * 1em);
   height: var(--height);
+  box-sizing: border-box;
   border: 1px solid $input-color;
-  border-radius: 4px 4px 0 0;
+  border-radius: calc(4/14 * 1em);
   outline: none;
   cursor: pointer;
   @include font-input-text;
-  height: 100%;
   padding-left: 0;
 
   // &:hover {
@@ -31,4 +31,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+}
+.dropdown__output-field_droped{
+
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }

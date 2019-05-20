@@ -1,4 +1,5 @@
 import pickmeup from './../../pickmeup/pickmeup.js';
+import Inputmask from "inputmask";
 addEventListener('DOMContentLoaded', function () {
     pickmeup.defaults.locales['ru'] = {
         days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
@@ -14,4 +15,5 @@ addEventListener('DOMContentLoaded', function () {
         prev: 'arrow_back',
         next: 'arrow_forward'
     });
+
 })

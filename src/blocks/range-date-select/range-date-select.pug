@@ -1,0 +1,31 @@
+//- Все примеси в этом файле должны начинаться c имени блока (range-date-select)
+
+mixin range-date-select(title_start, title_end, mods)
+
+  //- Принимает:
+  //-   title-start    {string} - заголовок первого поля ввода
+  //-   title-end    {string} - заголовок второго поля ввода
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +range-date-select('начало', 'конец', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' range-date-select_' + modsList[i].trim();
+      }
+    }
+
+  .range-date-select(class=allMods)&attributes(attributes)
+    .range-date-select__input-date
+      .range-date-select__input-date-start
+        .range-date-select__input-date-start-title=title_start
+        +input-date()
+      .range-date-select__input-date-end
+        .range-date-select__input-date-start-title=title_end
+        +input-date()
+    +datepicker()
+    block

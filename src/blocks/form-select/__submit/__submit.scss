@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока form-select__submit, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-select__submit {
+
+  height: calc(44/14 * 1em);
+  margin-top: calc(30.44 / 14 * 1em); 
+  margin-bottom: 0; 
+}

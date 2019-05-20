@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока button_arrow, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button_arrow {
+  padding: 0;
+	&::after {
+		content: "arrow_forward";
+    font-family: 'Material Icons';
+    font-style: normal;
+    text-transform: none;
+		font-size: calc(24/12 * 1em);
+    line-height: calc(44/24 * 1em);
+    width: calc(44/24 * 1em);
+    display: flex;
+    position: absolute;
+    position: absolute;
+    left: calc(100% - 44/24*1em);
+    top: 0;
+		align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+	}
+}

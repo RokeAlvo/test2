@@ -16,6 +16,7 @@
 			$(this).find('.dropdown__button-down').toggleClass('dropdown__button-down_undroped')
 				.toggleClass('dropdown__button-down_droped');
 			$(this).next('.dropdown__content-field').toggleClass('dropdown__content-field_visible');
+			$(this).toggleClass('dropdown__output-field_droped');
 		});
 
 		// обработчик клика по кнопке ОЧИСТИТЬ

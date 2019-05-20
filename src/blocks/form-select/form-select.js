@@ -5,3 +5,4 @@
 // ready(function(){
 //   
 // });
+// import $ from 'jquery';

@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока input-date__btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-date__btn {
+	&::after {
+		content: "expand_more";
+		font-family: 'Material Icons';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.714em;
+		line-height: 1.714em;
+		display: flex;
+		align-items: center;
+		text-align: center;
+
+		color: $color-Dark50;
+		cursor: pointer;
+	}
+}

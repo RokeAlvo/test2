@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока range-date-select__input-date-start-title, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.range-date-select__input-date-start-title {
+
+  @include font-h3;
+  line-height: 1.25em;
+  margin-bottom: 0.45333em;
+}

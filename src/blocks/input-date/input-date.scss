@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока input-date, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-date {
+  width: 10.714em;
+  height: 3.142em;
+  border: 1px solid $color-Dark25;
+  border-radius: 0.2857em;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}

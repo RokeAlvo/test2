@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока input-date__input-field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.input-date__input-field {
+  @include font-body;
+  border: 0;
+  text-align: center;
+  width: 7em;
+  margin-left: 0.5em;
+}
