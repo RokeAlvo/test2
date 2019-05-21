@@ -42,6 +42,7 @@ $star-size: 24px;
     display: inline-block;
     position: relative;
     // letter-spacing: 0.05em;
+    cursor: pointer;
 }
 
 .rating .star::before {

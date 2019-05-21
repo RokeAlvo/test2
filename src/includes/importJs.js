@@ -8,6 +8,7 @@ import "../blocks/form-login/form-login.js";
 import "../blocks/form-registration/form-registration.js";
 import "../blocks/form-select/form-select.js";
 import "../blocks/input-date/input-date.js";
+import "../blocks/item-card/item-card.js";
 import "../blocks/range-date-select/range-date-select.js";
 import "../blocks/range-slider/range-slider.js";
 import "../blocks/SimpleStarRating/SimpleStarRating.js";

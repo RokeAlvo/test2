@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (card-room)
+
+mixin item-card(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +card-room('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card-room_' + modsList[i].trim();
+      }
+    }
+
+  figure.item-card(class=allMods)&attributes(attributes)
+    .item-card__img
+      img(src="img/room1.png", alt="room1")
+    figurecaption.item-card__info
+      .item-card__tag
+        p
+          span="№"
+          span=" 888"
+          span=' люкс'
+        p
+          span="9 990₽"
+          span=" в сутки"
+      .item-card__rectangle
+      .item-card__rating
+        div
+          span(data-default-rating="4" ).rating
+        p
+          span="145"
+          span=" отзывов"
+
+  block

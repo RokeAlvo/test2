@@ -15,7 +15,7 @@
 		justify-content: space-between;
 		align-items: baseline;
 		margin-bottom: 20/14 * 1em;
-
+// проверть размеры шрифта и межбуквенный интервал
 		p:nth-child(1) {
 			font-family: "Montserrat";
 			font-style: normal;
@@ -92,6 +92,7 @@
 			}
 			span:last-child {
 				margin-left: auto;
+				font-size: 1em;
 			}
 		}
 		// p:last-child{
@@ -105,7 +106,7 @@
 		overflow: auto;
 		span {
 			font-weight: bold;
-			font-size: 19/14*1em;
+			font-size: 18/14*1em;
 			line-height: 24/19*1em;
 
 			color: $color-Dark100;
