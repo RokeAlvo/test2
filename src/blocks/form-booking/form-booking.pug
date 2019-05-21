@@ -1,0 +1,52 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-booking)
+
+mixin form-booking(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +form-booking('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' form-booking--' + modsList[i].trim();
+      }
+    }
+
+  form.form-booking(class=allMods)&attributes(attributes)
+    .form-booking__info
+      p
+        span="№"
+        span=" 888"
+        span=' люкс'
+      p
+        span="9 990₽"
+        span=" в сутки"
+    .form-booking__range-date
+      +range-date-select('Прибыте','выезд')
+    .form-booking__guest
+      +dropdown("гости","Сколько гостей", "drop4", "guest")
+    .form-booking__calculation
+      p
+        span='9 990₽ х 4 суток'
+        span='39 960₽'
+      p
+        span='Сбор за услуги: скидка 2 179₽'
+        span.label-i
+        span='0₽'
+      p
+        span='Сбор за дополнительные услуги'
+        span.label-i
+        span='300₽'
+    .form-booking__total
+      span='Итого'
+      span
+      span='38 081₽'
+    .form-booking__submit
+      +button('Забронировать', "color_purple, arrow")
+      block

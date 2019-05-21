@@ -1,0 +1,123 @@
+// В этом файле должны быть стили для БЭМ-блока form-booking, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-booking {
+	@include form-border;
+	width: calc(380 / 14 * 1em);
+	padding: calc(30 / 14 * 1em);
+	padding-top: calc(40 / 14 * 1em);
+
+	top: 0;
+
+	.form-booking__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 20/14 * 1em;
+
+		p:nth-child(1) {
+			font-family: "Montserrat";
+			font-style: normal;
+			font-weight: bold;
+			font-size: 1em;
+
+			display: inline-block;
+			vertical-align: baseline;
+			height: 30/14*1em;
+
+			span:nth-child(1) {
+				color: $color-Dark100;
+				line-height: 17/14 * 1em;
+			}
+			span:nth-child(2) {
+				color: $color-Dark100;
+				font-size: 24/14 * 1em;
+				line-height: 30/24 * 1em;
+			}
+			span:nth-child(3) {
+				color: $color-purple;
+				font-size: 12/14 * 1em;
+				text-transform: uppercase;
+				line-height: 15/12 * 1em;
+			}
+		}
+
+		p:nth-child(2) {
+			font-family: "Montserrat";
+			font-style: normal;
+			font-weight: bold;
+			font-size: 1em;
+			color: $color-Dark50;
+
+			display: inline-block;
+			vertical-align: baseline;
+			span:nth-child(1) {
+				line-height: 18/14 * 1em;
+			}
+			span:nth-child(2) {
+				font-size: 12/14 * 1em;
+				font-weight: normal;
+				line-height: 18/12 * 1em;
+			}
+		}
+	}
+
+	.form-booking__guest {
+		margin-bottom: 20/14 * 1em;
+	}
+
+	.form-booking__calculation {
+		margin-bottom: 30/14 * 1em;
+		p {
+			display: flex;
+			justify-content: flex-start;
+			align-items: baseline;
+			margin-bottom: 15/14 * 1em;
+			
+
+			span {
+				line-height: 18/14 * 1em;
+			}
+
+			span:nth-child(1) {
+				max-width: 214/318 * 100%;
+			}
+			span:nth-child(2) {
+				font-size: 12/14 * 1em;
+				&::after {
+					font-size: 1em;
+					// line-height: 20/12*1em;
+				}
+			}
+			span:last-child {
+				margin-left: auto;
+			}
+		}
+		// p:last-child{
+		// 	margin-bottom: 30/14*1em;
+		// }
+	}
+	.form-booking__total {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20/14*1em;
+		overflow: auto;
+		span {
+			font-weight: bold;
+			font-size: 19/14*1em;
+			line-height: 24/19*1em;
+
+			color: $color-Dark100;
+		}
+		span:nth-child(2){
+			flex-grow: 1;
+			border-bottom: 1px dashed $color-Dark25;
+			height: 1em;
+			margin: 0 5/19*1em 0 5/19*1em;
+		}
+	}
+	.form-booking__submit {
+		height: 44/14*1em;
+	}
+}

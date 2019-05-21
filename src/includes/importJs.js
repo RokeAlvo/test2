@@ -3,6 +3,7 @@ import "../blocks/date-select/date-select.js";
 import "../blocks/datepicker/datepicker.js";
 import "../blocks/dropdown/dropdown.js";
 import "../blocks/expand-checkbox-list/expand-checkbox-list.js";
+import "../blocks/form-booking/form-booking.js";
 import "../blocks/form-registration/form-registration.js";
 import "../blocks/form-select/form-select.js";
 import "../blocks/input-date/input-date.js";

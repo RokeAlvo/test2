@@ -3,15 +3,16 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .form-registration {
+  @include form-border;
 
   width: calc(380/14 * 1em);
   padding: calc(30/14 * 1em);
   padding-top: calc(40/14 *1em);
-  box-sizing: border-box;
+  
   display: block;
   position: absolute;
   top:550px;
-  background-color: var(--body-bacground-color);
+  
   h3{
     margin: 0;
     margin-bottom: 5/12*1em;

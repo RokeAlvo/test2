@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока label-i, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.label-i {
+  display: inline;
+  &:after {
+    content: "i";
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  box-sizing: border-box;
+  border: 1px solid $color-Dark25;
+  border-radius: 9999px;
+  color: $color-Dark25;
+  width: 20/12*1em;
+  height: 20/12*1em;
+  line-height: 20/12*1em;
+  margin-left: 1ch;
+  }
+}
