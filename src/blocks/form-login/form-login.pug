@@ -1,0 +1,31 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-login)
+
+mixin form-login(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +form-login('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' form-login_' + modsList[i].trim();
+      }
+    }
+
+  form.form-login(class=allMods)&attributes(attributes)
+    h1.form-login__title='Войти'
+    +input-text('email', 'email')
+    +input-text('password', 'Пароль')
+    .form-login__submit
+      +button('войти', "color_purple, arrow")
+    .form-login__sign
+      p='Нет аккаунта на Toxin'
+      .form-login__sign-button
+        +button('создать', 'color_white')
+    block

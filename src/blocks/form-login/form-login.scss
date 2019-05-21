@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока form-login, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-login {
+	@include form-border;
+	width: calc(380 / 14 * 1em);
+	padding: calc(30 / 14 * 1em);
+	padding-top: calc(40 / 14 * 1em);
+
+	top: 600px;
+
+	.form-login__title {
+		margin-bottom: 20/24 * 1em;
+	}
+
+	.input-text {
+		margin-bottom: 10/14 * 1em;
+	}
+
+	.form-login__submit {
+		height: 44/14 * 1em;
+		margin-bottom: 30/14 * 1em;
+		margin-top: 20/14 * 1em;
+	}
+
+	.form-login__sign {
+		display: flex;
+		justify-content: space-between;
+
+		.form-login__sign-button {
+			height: 44/14 * 1em;
+		}
+
+		p{
+			line-height: 44/14*1em;
+		}
+	}
+}
