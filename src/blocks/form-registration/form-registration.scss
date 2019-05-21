@@ -12,4 +12,13 @@
   position: absolute;
   top:550px;
   background-color: var(--body-bacground-color);
+  h3{
+    margin: 0;
+    margin-bottom: 5/12*1em;
+    line-height: 15/12*1em;
+    height: 15/12*1em;
+  }
+  .input-text{
+    margin-bottom: 10/14*1em;
+  }
 }

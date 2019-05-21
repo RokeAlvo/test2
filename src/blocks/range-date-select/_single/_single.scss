@@ -5,4 +5,7 @@
 .range-date-select_single {
 
   .range-date-select__input-date-end{display:none}
+  .input-date{width: 100%}
+  .range-date-select__input-date-start {width: 100%; display: block;}
+  .range-date-select__input-date-start-title {margin: 0;}
 }

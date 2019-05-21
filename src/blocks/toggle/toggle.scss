@@ -4,7 +4,7 @@
 
 .toggle {
 display: flex;
-  
+    &:hover{cursor: pointer;}
 }
 
 .toggle input{display:none}

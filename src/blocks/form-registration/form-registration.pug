@@ -18,7 +18,7 @@ mixin form-registration(text, mods)
       }
     }
 
-  .form-registration(class=allMods)&attributes(attributes)
+  form.form-registration(class=allMods)&attributes(attributes)
     h1.form-registration__title="Регистрация аккаунта"
     .form-registration__input-name
       +input-text("text", "Имя")
@@ -30,11 +30,21 @@ mixin form-registration(text, mods)
       +radio('radio_women','radioblock_gender')
         span='Женщина'
     .form-registration__input-birthday
-      +range-date-select('Дата рождения','','single')
-    .form-registration__registration-date
-    .form-registration__toggle_subscribe
+      h3='Дата рождения'
+      +range-date-select('','','single')
+    .form-registration__registration-data
+      h3='Данные для входа на сервис'
+      +input-text('email', 'email')
+      +input-text('password', 'Пароль')
+    .form-registration__toggle-subscribe
+      +toggle('form-registration__toggle_subscribe')
+        span="Получать спецпредложения"
     .form-registration__submit
+      +button('перейти к оплате', "color_purple, arrow")
     .form-registration__login
+      p='Уже есть аккаунта на Toxin'
+      .form-registration__login-button
+        +button('войти', 'color_white')
 
 
       block

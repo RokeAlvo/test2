@@ -17,12 +17,15 @@ $border-width: 2px;
   box-sizing: border-box;
   top: -3px;
 }
+// TODO переделать - без псевдоэлементов
 
 
 .button_color_white::before{
   position: absolute;
-  top: -$border-width; bottom: -$border-width;
-  left: -$border-width; right: -$border-width;
+  top: -$border-width; 
+  bottom: -$border-width;
+  left: -$border-width; 
+  right: -$border-width;
   z-index: -1;
   border-radius: 99999px;
   background: $purple-gradient;

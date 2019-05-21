@@ -2,7 +2,10 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.form-registration__toggle_subscribe {
-
-  $block-name:                &; // #{$block-name}__element
+.form-registration__toggle-subscribe {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 24/14*1em;
+  margin-bottom: 20/14*1em;
 }

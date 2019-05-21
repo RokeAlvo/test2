@@ -4,5 +4,11 @@
 
 .form-registration__login {
 
-  $block-name:                &; // #{$block-name}__element
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  p {
+    margin: 0;
+  }
 }
