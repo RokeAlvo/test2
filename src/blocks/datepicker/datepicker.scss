@@ -138,8 +138,6 @@ $font-size-nav: 19px;
 
 		nav {
 			color: $nav-color;
-			display: -ms-flexbox;
-			display: -webkit-flex;
 			display: flex;
 			justify-content: space-between;
 			line-height: 1.263em;

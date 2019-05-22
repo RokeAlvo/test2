@@ -2,14 +2,14 @@
   "name": "Test2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.pug",
-    "build": "parcel build src/index.pug -d docs --public-url ./"
+    "start": "parcel src/adaptiv.pug",
+    "build": "parcel build src/index.pug -d docs --public-url ./ --no-minify"
   },
   "keywords": [],
-  "author": "",
+  "author": "RokeAlvo",
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
@@ -18,11 +18,16 @@
     "postcss-grouper": "0.0.5",
     "postcss-modules": "^1.4.1",
     "postcss-sort-style-rules": "^0.2.0",
+    "postcss-sorting": "^5.0.0",
     "pug": "^2.0.3",
-    "sass": "^1.20.1"
+    "sass": "^1.20.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-order": "^3.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
+    "browserslist": "^4.6.0",
     "jq": "^1.7.2",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1"

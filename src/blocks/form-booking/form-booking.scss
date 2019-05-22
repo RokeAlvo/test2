@@ -15,7 +15,7 @@
 		justify-content: space-between;
 		align-items: baseline;
 		margin-bottom: 20/14 * 1em;
-// проверть размеры шрифта и межбуквенный интервал
+		// проверть размеры шрифта и межбуквенный интервал
 		p:nth-child(1) {
 			font-family: "Montserrat";
 			font-style: normal;
@@ -24,7 +24,7 @@
 
 			display: inline-block;
 			vertical-align: baseline;
-			height: 30/14*1em;
+			height: 30/14 * 1em;
 
 			span:nth-child(1) {
 				color: $color-Dark100;
@@ -74,7 +74,6 @@
 			justify-content: flex-start;
 			align-items: baseline;
 			margin-bottom: 15/14 * 1em;
-			
 
 			span {
 				line-height: 18/14 * 1em;
@@ -102,23 +101,23 @@
 	.form-booking__total {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 20/14*1em;
+		margin-bottom: 20/14 * 1em;
 		overflow: auto;
 		span {
 			font-weight: bold;
-			font-size: 18/14*1em;
-			line-height: 24/19*1em;
+			font-size: 18/14 * 1em;
+			line-height: 24/19 * 1em;
 
 			color: $color-Dark100;
 		}
-		span:nth-child(2){
+		span:nth-child(2) {
 			flex-grow: 1;
 			border-bottom: 1px dashed $color-Dark25;
 			height: 1em;
-			margin: 0 5/19*1em 0 5/19*1em;
+			margin: 0 5/19 * 1em 0 5/19 * 1em;
 		}
 	}
 	.form-booking__submit {
-		height: 44/14*1em;
+		height: 44/14 * 1em;
 	}
 }
