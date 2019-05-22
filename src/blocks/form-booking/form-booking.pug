@@ -31,6 +31,15 @@ mixin form-booking(text, mods)
       +range-date-select('Прибыте','выезд')
     .form-booking__guest
       +dropdown("гости","Сколько гостей", "drop4", "guest")
+        +dropdown__content('Взрослые')
+        +dropdown__content('Дети')
+        +dropdown__content('Младенцы')
+        .dropdown__button-block
+            .dropdown__button-clear
+                +button("очистить", "icon-link, icon-link_gray")
+            .dropdown__button-submit
+                +button("применить", "icon-link, icon-link_purple")
+
     .form-booking__calculation
       p
         span='9 990₽ х 4 суток'

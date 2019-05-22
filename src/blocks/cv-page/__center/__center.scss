@@ -3,7 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .cv-page__center {
-
+  
   min-width: 400px;
   display: flex;
   flex-direction: column;
@@ -11,5 +11,5 @@
   background-color: #E5E5E5;
   align-items: center;
   padding-top: 5px;
-
+  display: none;
 }

@@ -3,15 +3,22 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header__nav {
-  min-width: 530px;
-  max-width: 530px;
+  width: 530/1440*100%;
+  min-width: 460px;
   height: 21px;
   margin-top: 26px;
   margin-bottom: 23px;
   margin-right: 30px;
-  margin-left: 30px;
+  margin-left: auto;
   grid-area: nav;
   @media screen and (max-width: $sc2){
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0.5em   var(--margin-header);
     order: 1;
+  }
+  @media screen and (max-width: $sc3){
+    display: none;
+    min-width: 0;
   }
 }

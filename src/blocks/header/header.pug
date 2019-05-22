@@ -19,10 +19,8 @@ mixin header(text, mods)
     }
 
   .header(class=allMods)&attributes(attributes)
-    .header__margin-left
     .header__logo
       +logo()
-    .header__margin-center
     .header__nav
       +navigation()
     .header__btn
@@ -32,5 +30,4 @@ mixin header(text, mods)
         +button('login', 'color_white')
       .header__btn-registration
         +button('register', "color_purple")
-    .header__margin-right
       block

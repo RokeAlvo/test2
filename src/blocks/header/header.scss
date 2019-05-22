@@ -3,14 +3,18 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
+    --margin-header: calc(10px + 20 / 1440 * 100%);
+
     display: flex;
+    min-height: 70px;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     vertical-align: center;
     align-content: center;
     @media screen and (max-width: $sc2){
-        flex-basis: 0;
+        padding: 5px 0;
+        // flex-basis: 0;
         flex-flow: row wrap;
         justify-content: space-between;
 

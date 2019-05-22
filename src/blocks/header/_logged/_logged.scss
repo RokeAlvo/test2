@@ -6,6 +6,10 @@
   & .header__btn-registration {display: none;}
   & .header__btn-sign {display: none;}
   & .header__user {display: block;}
-  & .header__rectangle {display: block;}
-
+  & .header__rectangle {
+    display: block;
+    @media screen and (max-width: $sc2){
+      display:none;
+    }
+  }
 }
