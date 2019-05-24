@@ -1,7 +1,9 @@
+"use strict";
 console.log("скрипт сборки");
 
 
 /// 
+const parcel = require ('parcel-bundler');
 
 const fs = require('fs');
 const path = require('path');
@@ -58,8 +60,13 @@ function writeScssImport(cb) {
 }
 exports.writeScssImport = writeScssImport;
 
+function runParcel(){
+  return src ( 'src/*.pug', {read:false})
+    .pipe( parcel({outDir: 'dist', publicURL: './'}, {source: 'build'}))
+    .pipe (dest('dist'))
+}
+exports.runParcel = runParcel;
 
-exports.default = parallel(writePugMixinsFile, writeJsImport, writeScssImport);
 
 //функции не являющиеся частью glup
 function getDirectories(ext) {
@@ -159,3 +166,8 @@ function sortStyle(inArr) {
   });
   return outArr;
 };
+
+
+exports.default = parallel(writePugMixinsFile, writeJsImport, writeScssImport);
+exports.run = series(parallel(writePugMixinsFile, writeJsImport, writeScssImport), runParcel);
+

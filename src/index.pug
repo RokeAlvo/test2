@@ -1,7 +1,7 @@
 include includes/mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -31,80 +31,21 @@ html(lang="en")
         <title>Главная</title>
     body.cv-page
         //- тут наша страница
-        .cv-page__header
+        .cv-page__page-header
             +header('', 'standart')
         .cv-page__page-main
-            .cv-page__left
-                +dropdown("dropdown1", "Сколько помещений", "drop1", "standart")
-                    +dropdown__content('Спальни')
-                    +dropdown__content('Госстинные')
-                    +dropdown__content('Ванные комнаты')
-                +dropdown("dropdown2","Сколько гостей", "drop2", "guest")
-                    +dropdown__content('Взрослые')
-                    +dropdown__content('Дети')
-                    +dropdown__content('Младенцы')
-                    .dropdown__button-block
-                        .dropdown__button-clear
-                            +button("очистить", "icon-link, icon-link_gray")
-                        .dropdown__button-submit
-                            +button("применить", "icon-link, icon-link_purple")
-                +checkbox("вот так вот", 'check1')
-                    p="Можно приглаcить гостей (до 10человек)"
-                +checkbox("вот так вот", 'check2')
-                    p="второй"
-                +expand-checkbox-list("expandable checkbox list", "expand-checkbox-list1", "standart")
-                    +checkbox("вот так вот", 'check4')
-                        p="Можно приглаcить гостей (до 10человек)"
-                    +checkbox("вот так вот", 'check5')
-                        p="второй"
-                +expand-checkbox-list("expandable checkbox list", "expand-checkbox-list2", "standart")
-                    +checkbox("вот так вот", 'check6')
-                        p="Можно приглаcить гостей (до 10человек)"
-                    +checkbox("вот так вот", 'check7')
-                        p="второй"
-                +checkbox('' ,'check3', 'reach')
-                    p="Будут гости!"
-                    p="Можно приглаcить гостей (до 10человек)"
-                div(style="display: flex")
-                    +radio('radio1','radioblock1')
-                        span='Мужчина'
-                    +radio('radio2','radioblock1')
-                        span='Женщина'
-                +radio('radio3','radioblock2')
-                    span='Большой'
-                +radio('radio4','radioblock2')
-                    span='Маленький'
-                +toggle('tog1')
-                    span="Послать всех"
-                div
-                    h3="like button"
-                    +button-like('purple', 'color_white, color_white_min' )
-                    +button-like('gray','color_gray')
-                h3='rate button'
-                div
-                    span(data-default-rating="4" ).rating
-                    
-                <input type="text" name="date" id="datepicker">
-
-                .range-slider__waper
-                    .range-slider__output-wraper
-                        h3.range-slider__title='range-slider'
-                        .range-slider__output="0"
-                    +range-slider()
-
-                .bullet-list__wrap
-                    .bullet-list
-                        h3="bullet list"
-                        ol
-                            li='пункт раз'
-                            li='пункт два'
-                            li='Время прибытия — после 13:00, а выезд до 12:00'
-            .cv-page__center
-                +form-select()
-                +form-registration()
-            .cv-page__right
-                +form-booking()
-                +form-login()
-                +item-card()
+            section
+                ul.pgwSlider
+                    li
+                        img(src="img/lp1.png")
+                    li
+                        img(src="img/lp2.png")
+                    li
+                        img(src="img/lp3.png")
+                .form-wrapper
+                    +form-select()
+                .slogan
+                    p="Лучшие номера для вашей работы, отдыха и просто вдохновения"
+        .cv-page__footer
 
         script(src='./main.js')

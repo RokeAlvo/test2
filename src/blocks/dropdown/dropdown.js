@@ -50,7 +50,8 @@
 
 		// обработчик клика по +-
 		$(this).find('.dropdown__content-inner').each(function () {
-			$(this).find('.content-select-button:first').click(function () {
+			$(this).find('.content-select-button:first').click(function (e) {
+				e.preventDefault();
 				let value = $(this).closest('.dropdown__content-select').find('.dropdown__content-select-value').html();
 				value = +value - 1;
 				if (value < 0) {
@@ -72,6 +73,7 @@
 		function eventValue(elem) {
 			let value = elem.text();
 			if (value < 0) {
+				alert('выздвали Error');
 				return Error
 			};
 			// проверяем значение и меняем стиль кнопок

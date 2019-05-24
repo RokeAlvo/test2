@@ -6,4 +6,7 @@
   margin: 0;
   outline: none;
   @include font-body;
+  width: 100vw;
+  max-width: 1920px;
+  
 }
