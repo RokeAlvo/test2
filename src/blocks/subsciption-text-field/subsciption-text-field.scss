@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока subsciption-text-field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.subsciption-text-field {
+  position: relative;
+  
+	button {
+		font-family: Material Icons;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24/14 * 1em;
+		line-height: 44/24 * 1em;
+    display: flex;
+    width: 44/24*1em;
+    align-items: center;
+    justify-content: center;
+		text-align: center;
+		border: 0;
+		background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top:0;
+    color: $color-purple;
+
+    &:hover{
+      color: rgba($color-purple, 0.5);
+    }
+  }
+
+  input{
+    width: calc(100% - 44/14*1em - 1em);
+  }
+}

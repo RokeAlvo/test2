@@ -1,0 +1,56 @@
+//- Все примеси в этом файле должны начинаться c имени блока (footer)
+
+mixin footer(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +footer('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' footer_' + modsList[i].trim();
+      }
+    }
+
+  footer.footer(class=allMods)&attributes(attributes)
+    .footer-big
+      .footer-big__logo
+        +logo()
+        p="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+      .footer-big__nav
+        h3="Навигация"
+        ul
+          li="О нас"
+          li="Новости"
+          li="Служба поддержки"
+          li="Услуги"
+      .footer-big__info
+        h3="о нас"
+        ul
+          li="О сервисе"
+          li="Наша команда"
+          li="Вакансии"
+          li="Инвесторы"
+      .footer-big__suport
+        h3="Служба поддержки"
+        ul
+          li="Соглашения"
+          li="Сообщества"
+          li="Связь с нами"
+      .footer-big__subscribe
+        h3="Подписка"
+        p="Получайте специальные предложения и новости сервиса"
+        +subsciption-text-field()
+    .copyright-bar
+      p="Copyright © 2018 Toxin отель. Все права зачищены."
+      .social-button
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-square"></i>
+        span=''
+  block

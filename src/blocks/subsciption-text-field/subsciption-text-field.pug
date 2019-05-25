@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (subsciption-text-field)
+
+mixin subsciption-text-field(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +subsciption-text-field('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' subsciption-text-field--' + modsList[i].trim();
+      }
+    }
+
+  .subsciption-text-field(class=allMods)&attributes(attributes)
+    +input-text("email", "email")
+    button(type="button")="arrow_forward"
+      block

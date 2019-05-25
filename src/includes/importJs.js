@@ -12,3 +12,4 @@ import "../blocks/item-card/item-card.js";
 import "../blocks/range-date-select/range-date-select.js";
 import "../blocks/range-slider/range-slider.js";
 import "../blocks/SimpleStarRating/SimpleStarRating.js";
+import "../blocks/subsciption-text-field/subsciption-text-field.js";
