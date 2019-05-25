@@ -3,8 +3,6 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
-    --margin-header: calc(10px + 20 / 1440 * 100%);
-
     display: flex;
     min-height: 70px;
     flex-wrap: nowrap;

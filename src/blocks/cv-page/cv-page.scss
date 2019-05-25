@@ -8,5 +8,6 @@
   @include font-body;
   width: 100vw;
   max-width: 1920px;
-  
+  min-width: 640px;
+  --margin-header: calc(140 / 1440 * 100vw + 70/1440*100vw - 70px);
 }

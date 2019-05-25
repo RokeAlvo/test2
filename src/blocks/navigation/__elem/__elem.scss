@@ -5,7 +5,13 @@
 .navigation__elem {
 	display: inline-flex;
 	cursor: pointer;
+	margin-left: 20px;
+	white-space: nowrap;
 
-    	&:hover{opacity: 0.5;}
+	&:hover{opacity: 0.5;}
+	@media screen and (max-width: $sc2){
+		margin-left: 0px;
+    }
+
 
 }
