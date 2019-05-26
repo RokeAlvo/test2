@@ -44,11 +44,36 @@
         }
     }
 
-    .form-wrapper{
+    .form-select-wrapper{
         position: absolute;
         top:70/1440*100vw;
         left: var( --margin-header);
         z-index: 15;
+    }
+
+    .form-select-wrapper_hiden{
+        display: none;
+    }
+
+    .form-registration-wrapper{
+        position: absolute;
+        top:30/1440*100vw;
+        left: calc(530 / 1440 * 100vw + 400/1440*100vw - 400px);
+        z-index: 15;
+    }
+
+    .form-registration-wrapper_hiden{
+        display: none;
+    }
+    .form-login-wrapper{
+        position: absolute;
+        top:163/1440*100vw;
+        left: calc(530 / 1440 * 100vw + 400/1440*100vw - 400px);
+        z-index: 15;
+    }
+
+    .form-login-wrapper_hiden{
+        display: none;
     }
 
     .slogan{

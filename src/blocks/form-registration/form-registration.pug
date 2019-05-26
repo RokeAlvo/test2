@@ -1,12 +1,11 @@
 //- Все примеси в этом файле должны начинаться c имени блока (form-registration)
 
-mixin form-registration(text, mods)
+mixin form-registration(mods)
 
   //- Принимает:
-  //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +form-registration('Текст', 'some-mod')
+        +form-registration('some-mod')
 
   -
     // список модификаторов

@@ -28,8 +28,7 @@ html(lang="ru")
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        //- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <title>Главная</title>
+        <title>Toxin</title>
     body.cv-page
         //- тут наша страница
         .cv-page__page-header
@@ -38,13 +37,17 @@ html(lang="ru")
             section
                 ul.pgwSlider
                     li
-                        img(src="img/lp1.png")
+                        img(src="img/lp1-min.jpg")
                     li
-                        img(src="img/lp2.png")
+                        img(src="img/lp2-min.jpg")
                     li
-                        img(src="img/lp3.png")
-                .form-wrapper
+                        img(src="img/lp3-min.jpg")
+                .form-select-wrapper.form-select-wrapper_hiden
                     +form-select()
+                .form-registration-wrapper.form-registration-wrapper_hiden
+                    +form-registration()
+                .form-login-wrapper
+                    +form-login()
                 .slogan
                     p="Лучшие номера для вашей работы, отдыха и просто вдохновения"
         .cv-page__footer
