@@ -6,11 +6,11 @@ class Model {
     }
 
     addUser(user) {
-        if (this.getUserFromBase(user.login) === null) {this.addUserToBase(user)}
+        if (this.getUserFromBase(user.login) === null) {this._addUserToBase(user)}
         return this
     }
 
-    addUserToBase(user){
+    _addUserToBase(user){
         this.userBase.push(user)
     }
     getUserFromBase(userName) {
@@ -18,7 +18,7 @@ class Model {
             return user.login === userName
         });
         if (result.length > 0) {
-            return this.getUser(result[0].login, result[0].id, result[0].pasword)
+            return this._getUser(result[0].login, result[0].id, result[0].pasword)
         }
         else {
             return null
@@ -26,7 +26,7 @@ class Model {
     }
 
     // интерфейс к базе
-    getUser(login, id, pasword){
+    _getUser(login, id, pasword){
         let user={}
         user.login = login;
         user.id=id;

@@ -23,9 +23,10 @@ class View extends EventEmitter {
         super();
 
         this.header = new Obj('header', ['standart', 'logged']);
+        this.formSelect= new Obj('form-select-wrapper', ['hiden', '']);
         this.main =
             {
-                formSelect: new Obj('form-select-wrapper', ['hiden', '']),
+                // formSelect: new Obj('form-select-wrapper', ['hiden', '']),
                 formRegistration: new Obj('form-registration-wrapper', ['hiden', '']),
                 formLogin: new Obj('form-login-wrapper', ['hiden', ''])
             }
@@ -47,6 +48,14 @@ class View extends EventEmitter {
             });
         });
     }
+
+
+    runScript(script){
+        script.forEach( (instruction)=>{
+            instruction.fn(...instruction.args)
+        });
+    }
+
 }
 
 class Obj {
@@ -54,22 +63,23 @@ class Obj {
         this.selector = selector;
         this.html = document.querySelector(`.${selector}`);
         this.viewes = viewes;
-    }
-    toggleView(view) {
-        if (!this.viewes.some(elem => view === elem) || view == undefined) {
-            return Error;
+        this.toggleView = (view)=> {
+            if (!this.viewes.some(elem => view === elem) || view == undefined) {
+                return Error;
+            }
+            else {
+                this.viewes.forEach(item => {
+                    if (item === '') {
+                        if (item !== view) { this.html.classList.remove(`${this.selector}_${item}`) };
+                    } else {
+                        item === view ? this.html.classList.add(`${this.selector}_${item}`)
+                            : this.html.classList.remove(`${this.selector}_${item}`);
+                    }
+                });
+            }
+            return this
         }
-        else {
-            this.viewes.forEach(item => {
-                if (item === '') {
-                    if (item !== view) { this.html.classList.remove(`${this.selector}_${item}`) };
-                } else {
-                    item === view ? this.html.classList.add(`${this.selector}_${item}`)
-                        : this.html.classList.remove(`${this.selector}_${item}`);
-                }
-            });
-        }
-        return this
+    
     }
 }
 
