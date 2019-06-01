@@ -27,6 +27,7 @@ html(lang="ru")
         <link rel="manifest" href="favicon/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="Description" content="Тестовое задание на frontEnd">
         <meta name="theme-color" content="#ffffff">
         <title>Toxin</title>
     body.cv-page
@@ -34,7 +35,8 @@ html(lang="ru")
         .cv-page__page-header
             +header('', 'standart')
         .cv-page__page-main
-            section
+            //- landing-page
+            section.landing-page1.landing-page1_hiden
                 ul.pgwSlider
                     li
                         img(src="img/lp1-min.jpg")
@@ -50,7 +52,56 @@ html(lang="ru")
                     +form-login()
                 .slogan
                     p="Лучшие номера для вашей работы, отдыха и просто вдохновения"
+            //- страница фильтра
+            section.filter-page
+                .filter-page__filter
+                    .filter-page__date
+                        h3='Даты пребывания в отеле'
+                        +range-date-select('','','single')
+                    .filter-page__guest
+                        +dropdown("гости","Сколько гостей", "drop4", "guest")
+                            +dropdown__content('Взрослые')
+                            +dropdown__content('Дети')
+                            +dropdown__content('Младенцы')
+                    .filter-page__slider
+                        .range-slider__waper
+                            .range-slider__output-wraper
+                                h3.range-slider__title='Диапазон цены'
+                                .range-slider__output="999"
+                            +range-slider()
+                        p='Стоимость за сутки пребывания в номере'
+                    .filter-page__option
+                        h3='Дополнительные опции'
+                        +checkbox("вот так вот", 'check1')
+                            p="Можно курить"
+                        +checkbox("вот так вот", 'check2')
+                            p="Можно с питомцами"
+                        +checkbox('' ,'check3')
+                            p="Можно приглаcить гостей (до 10человек)"
+                    .filter-page__availability
+                        h3='Доступность'
+                        +checkbox('' ,'check3', 'reach')
+                            p="Широкий коридор"
+                            p="Ширина коридоров в номере не менее 91 см."
+                        +checkbox('' ,'check3', 'reach')
+                            p="Помощник для инвалидов"
+                            p="На 1 этаже вас встретит специалист  и проводит до номера."
+                    .filter-page__amenities
+                        +dropdown("Удобства номера", "Сколько помещений", "drop1", "standart")
+                            +dropdown__content('Спальни')
+                            +dropdown__content('Госстинные')
+                            +dropdown__content('Ванные комнаты')
+                    .filter-page__convenience
+                        +expand-checkbox-list("Дополнительные удобства", "expand-checkbox-list2", "standart")
+                            +checkbox("вот так вот", 'check6')
+                                p="Девочки"
+                            +checkbox("вот так вот", 'check7')
+                                p="Мальчики?"
+
+
+
+
+                .filter-page__filter-result
         .cv-page__footer
             +footer()
-
         script(src='./main.js')

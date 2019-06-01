@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока filter-page__slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-page__slider {
+  margin-bottom: 30/14*1rem;
+
+  p {
+    @include font-body_s;
+    margin-top: 10/14*1rem;
+  }
+
+}

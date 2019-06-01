@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока filter-page__filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-page__filter {
+  display: block;
+  position: relative;
+  max-width: 266/14*1rem;
+
+}

@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока filter-page__option, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-page__option {
+
+  width: 222/14*1rem;
+  margin-bottom: 30.88/14*1rem;
+  h3 {
+    margin-bottom: 16.56/14*1rem;
+    margin-top: 0;
+    line-height: 15/14*1rem;
+  }
+}

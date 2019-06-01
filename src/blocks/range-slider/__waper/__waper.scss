@@ -3,10 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .range-slider__waper {
-  width: 266px;
-  height: 47px;
-  border: 1px solid black;
+  height: 47/14 * 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
