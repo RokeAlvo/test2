@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока cv-page__rectangle, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cv-page__rectangle {
+  display: block;
+  position: relative;
+ height: 1px;
+ background: #E5E5E5;
+}
