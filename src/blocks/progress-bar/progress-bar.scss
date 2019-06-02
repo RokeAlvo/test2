@@ -1,0 +1,144 @@
+.progress-bar {
+	position: relative;
+	--size: 120px;
+	width: var(--size);
+	min-width: var(--size);
+	min-height: var(--size);
+	max-height: var(--size);
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+
+	.progress-bar__img-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.progress-bar__value {
+		font-weight: bold;
+		font-size: 24/14*1rem;
+		line-height: 30/14*1rem;
+	}
+
+	.progress-bar__text {
+    font-weight: bold;
+		font-size: 12/14*1rem;
+		line-height: 15/14*1rem;
+
+	}
+}
+
+.progress-bar_perfect {
+	p {
+		color: #ffe39c;
+	}
+
+	.progress-bar__arc-left_bold {
+		visibility: visible;
+	}
+
+	.progress-bar__arc-left_think {
+		visibility: hidden;
+	}
+	.progress-bar__arc-right-top_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-top_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-bottom_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-bottom_think {
+		visibility: visible;
+	}
+}
+.progress-bar_good {
+	p {
+		color: #6fcf97;
+	}
+
+	.progress-bar__arc-left_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-left_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-top_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-top_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-bottom_bold {
+		visibility: visible;
+	}
+
+	.progress-bar__arc-right-bottom_think {
+		visibility: hidden;
+	}
+}
+
+.progress-bar_acceptable {
+	p {
+		color: #bc9cff;
+	}
+
+	.progress-bar__arc-left_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-left_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-top_bold {
+		visibility: visible;
+	}
+
+	.progress-bar__arc-right-top_think {
+		visibility: hidden;
+	}
+	.progress-bar__arc-right-bottom_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-bottom_think {
+		visibility: visible;
+	}
+}
+.progress-bar_pure {
+	p {
+		color: #919191;
+	}
+
+	.progress-bar__arc-left_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-left_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-top_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-top_think {
+		visibility: visible;
+	}
+	.progress-bar__arc-right-bottom_bold {
+		visibility: hidden;
+	}
+
+	.progress-bar__arc-right-bottom_think {
+		visibility: visible;
+	}
+}

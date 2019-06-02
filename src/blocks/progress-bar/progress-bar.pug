@@ -1,0 +1,62 @@
+//- Все примеси в этом файле должны начинаться c имени блока (progress-bar)
+
+mixin progress-bar(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов: progress-bar_pure, .progress-bar_acceptable,
+  //-                                             .progress-bar_good, .progress-bar_perfect
+  //- Вызов:
+        +progress-bar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' progress-bar_' + modsList[i].trim();
+      }
+    }
+
+  .progress-bar.progress-bar_good(class=allMods)&attributes(attributes)
+    p.progress-bar__value="260"
+    p.progress-bar__text='голосов'
+    .progress-bar__img-wrapper
+      <svg class="circle"  viewBox="0 0 121 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="59" height="121">
+      <path d="M0 0H59V121H0V0Z" fill="#C4C4C4"/>
+      </mask>
+      <g mask="url(#mask0)">
+          <circle class="progress-bar__arc-left_think" cx="60" cy="61" r="58" stroke="url(#paint0_linear)" stroke-width="4"/>
+          <circle class="progress-bar__arc-left_bold" cx="60" cy="61" r="55" stroke="url(#paint0_linear)" stroke-width="10"/>
+      </g>
+      <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="61" y="1" width="59" height="59">
+      <path d="M61 1H120V60H61V1Z" fill="#C4C4C4"/>
+      </mask>
+      <g mask="url(#mask1)">
+      <circle class="progress-bar__arc-right-top_think" cx="59" cy="61" r="58" stroke="url(#paint1_linear)" stroke-width="4"/>
+      <circle class="progress-bar__arc-right-top_bold" cx="59" cy="61" r="55" stroke="url(#paint1_linear)" stroke-width="10"/>
+      </g>
+      <mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="60" y="62" width="59" height="59">
+      <path d="M119 62V121H60L60 62L119 62Z" fill="#C4C4C4"/>
+      </mask>
+      <g mask="url(#mask2)">
+      <circle class="progress-bar__arc-right-bottom_think" cx="59" cy="61" r="58" transform="rotate(90 59 61)" stroke="url(#paint2_linear)" stroke-width="4"/>
+      <circle class="progress-bar__arc-right-bottom_bold" cx="59" cy="61" r="55" transform="rotate(90 59 61)" stroke="url(#paint2_linear)" stroke-width="10"/>
+      </g>
+      <defs>
+      <linearGradient id="paint0_linear" x1="60" y1="1" x2="60" y2="121" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE39C"/>
+      <stop offset="1" stop-color="#FFBA9C"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear" x1="59" y1="1" x2="59" y2="121" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BC9CFF"/>
+      <stop offset="1" stop-color="#8BA4F9"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear" x1="59" y1="1" x2="59" y2="121" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6FCF97"/>
+      <stop offset="1" stop-color="#66D2EA"/>
+      </linearGradient>
+      </defs>
+      </svg>
+    block

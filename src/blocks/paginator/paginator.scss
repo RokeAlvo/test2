@@ -6,6 +6,10 @@
 	display: inline-block;
 	position: relative;
 
+	input{
+		display: none;
+	}
+
 	.paginator__button-block {
 		display: flex;
 		position: relative;
@@ -15,12 +19,15 @@
 		margin-bottom: 10/14*1rem;
 	}
 	.paginator__button {
+		display: flex;
 		position: relative;
 		width: (100/6 * 1) * 1%;
 		min-height: 100%;
 		border: 0;
 		border-image-width: 0;
-    @include font-body_s;
+		@include font-body_s;
+		justify-content: center;
+		align-items: center;
     cursor: pointer;
     background-color: transparent;
 	}
@@ -40,7 +47,7 @@
 		color: var(--body-bacground-color);
   }
   
-	.paginator__button_active {
+	input:checked + .paginator__button {
 		display: flex;
 		justify-content: center;
 		align-items: center;

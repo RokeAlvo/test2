@@ -20,11 +20,16 @@ mixin paginator(text, mods)
 
   .paginator(class=allMods)&attributes(attributes)
     .paginator__button-block
-      button(type='button').paginator__button.paginator__button_active='1'
-      button(type='button').paginator__button='2'
-      button(type='button').paginator__button='3'
-      button(type='button').paginator__button='...'
-      button(type='button').paginator__button='15'
+      input(type='radio' id='paginator1' name='paginator' checked)
+      label(for='paginator1').paginator__button='1'
+      input(type='radio' id='paginator2' name='paginator')
+      label(for='paginator2').paginator__button='2'
+      input(type='radio' id='paginator3' name='paginator')
+      label(for='paginator3').paginator__button='3'
+      input(type='radio' id='paginator4' name='paginator' disabled)
+      label(for='paginator4').paginator__button='...'
+      input(type='radio' id='paginator5' name='paginator')
+      label(for='paginator5').paginator__button='15'
       button(type='button').paginator__button.paginator__button_arrow='arrow_forward'
     p.paginator__text='1 – 12 из 100+ вариантов аренды'
     block
