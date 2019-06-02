@@ -35,8 +35,12 @@ html(lang="ru")
         .cv-page__page-header
             +header('', 'standart')
         .cv-page__page-main
-            //- landing-page
-            section.landing-page1.landing-page1_hiden
+            .form-registration-wrapper.form-registration-wrapper_hiden
+                +form-registration()
+            .form-login-wrapper.form-login-wrapper_hiden
+                +form-login()
+            //- lp1
+            section.landing-page1
                 ul.pgwSlider
                     li
                         img(src="img/lp1-min.jpg")
@@ -44,16 +48,12 @@ html(lang="ru")
                         img(src="img/lp2-min.jpg")
                     li
                         img(src="img/lp3-min.jpg")
-                .form-select-wrapper.form-select-wrapper_hiden
+                .form-select-wrapper
                     +form-select()
-                .form-registration-wrapper.form-registration-wrapper_hiden
-                    +form-registration()
-                .form-login-wrapper.form-login-wrapper_hiden
-                    +form-login()
                 .slogan
                     p="Лучшие номера для вашей работы, отдыха и просто вдохновения"
             //- страница фильтра
-            section.filter-page
+            section.filter-page.filter-page_hiden
                 aside.filter-page__filter
                     .filter-page__date
                         h3='Даты пребывания в отеле'

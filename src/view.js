@@ -24,17 +24,22 @@ class View extends EventEmitter {
 
         this.header = new Obj('header', ['standart', 'logged']);
         this.formSelect= new Obj('form-select-wrapper', ['hiden', '']);
+        this.lp=new Obj('landing-page1', ['hiden', '']);
+        this.filterPage=new Obj('filter-page', ['hiden', '']);
         this.main =
             {
                 // formSelect: new Obj('form-select-wrapper', ['hiden', '']),
                 formRegistration: new Obj('form-registration-wrapper', ['hiden', '']),
                 formLogin: new Obj('form-login-wrapper', ['hiden', ''])
             }
+            
         this.appEvent = new AppEvent();
         this.appEvent.add('heder.clickButtonRegistration', 'click', '.header__btn-registration button')
             .add('header.clickButtonLogin', 'click', '.header__btn-sign button')
             .add('formLogin.clickButtonLogin', 'click', '.form-login__submit button')
             .add('formLogin.clickButtonRegistration', 'click', '.form-login__sign-button button')
+            .add('form-select__submit.clickButton', 'click', '.form-select__submit button')
+            .add('header__logo.click', 'click', '.header__logo')
 
         this.addDomEvent();
     }
@@ -42,8 +47,9 @@ class View extends EventEmitter {
     addDomEvent() {
         document.addEventListener('click', e => {
             Array.from(this.appEvent.eventList).forEach(appEvent => {
-                if (e.target == document.querySelector(appEvent.selector)) {
+                if (document.querySelector(appEvent.selector).contains(e.target)) {
                     this.emit(appEvent.name);
+                    console.log('appEvent.name :', appEvent.name);
                 }
             });
         });
