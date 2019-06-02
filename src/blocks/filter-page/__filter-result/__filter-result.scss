@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока filter-page__filter-result, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-page__filter-result {
+  width: 100%;
+  // display: flex;
+  // justify-content: flex-start;
+  margin-left: calc(60 / 140 * var(--margin-header));
+}

@@ -63,8 +63,11 @@
 @import "../blocks/filter-page/__convenience/__convenience.scss";
 @import "../blocks/filter-page/__date/__date.scss";
 @import "../blocks/filter-page/__filter/__filter.scss";
+@import "../blocks/filter-page/__filter-result/__filter-result.scss";
 @import "../blocks/filter-page/__guest/__guest.scss";
+@import "../blocks/filter-page/__header/__header.scss";
 @import "../blocks/filter-page/__option/__option.scss";
+@import "../blocks/filter-page/__paginator/__paginator.scss";
 @import "../blocks/filter-page/__slider/__slider.scss";
 @import "../blocks/footer/footer.scss";
 @import "../blocks/form-booking/form-booking.scss";
@@ -103,6 +106,7 @@
 @import "../blocks/input-text/__wrap/__wrap.scss";
 @import "../blocks/item-arrow/item-arrow.scss";
 @import "../blocks/item-card/item-card.scss";
+@import "../blocks/items-conteiner/items-conteiner.scss";
 @import "../blocks/label-i/label-i.scss";
 @import "../blocks/landing-page1/_hiden/_hiden.scss";
 @import "../blocks/logo/logo.scss";
@@ -111,6 +115,7 @@
 @import "../blocks/navigation/__elem/__elem.scss";
 @import "../blocks/navigation/__elem/_arrowed/_arrowed.scss";
 @import "../blocks/navigation/__elem/_bold/_bold.scss";
+@import "../blocks/paginator/paginator.scss";
 @import "../blocks/radio/radio.scss";
 @import "../blocks/radio/__img/__img.scss";
 @import "../blocks/radio/__input/__input.scss";

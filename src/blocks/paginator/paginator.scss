@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока paginator, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.paginator {
+	display: inline-block;
+	position: relative;
+
+	.paginator__button-block {
+		display: flex;
+		position: relative;
+		width: 240px;
+		height: 40px;
+		box-sizing: content-box;
+		margin-bottom: 10/14*1rem;
+	}
+	.paginator__button {
+		position: relative;
+		width: (100/6 * 1) * 1%;
+		min-height: 100%;
+		border: 0;
+		border-image-width: 0;
+    @include font-body_s;
+    cursor: pointer;
+    background-color: transparent;
+	}
+
+	.paginator__button_arrow {
+		font-family: "Material Icons";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 999999px;
+		background-image: $green-gradient;
+		color: var(--body-bacground-color);
+  }
+  
+	.paginator__button_active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 999999px;
+		background-image: $purple-gradient;
+		color: var(--body-bacground-color);
+  }
+  
+  .paginator__text{
+    text-align: center;
+  }
+
+}

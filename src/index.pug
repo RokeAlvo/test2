@@ -54,7 +54,7 @@ html(lang="ru")
                     p="Лучшие номера для вашей работы, отдыха и просто вдохновения"
             //- страница фильтра
             section.filter-page
-                .filter-page__filter
+                aside.filter-page__filter
                     .filter-page__date
                         h3='Даты пребывания в отеле'
                         +range-date-select('','','single')
@@ -80,10 +80,10 @@ html(lang="ru")
                             p="Можно приглаcить гостей (до 10человек)"
                     .filter-page__availability
                         h3='Доступность'
-                        +checkbox('' ,'check3', 'reach')
+                        +checkbox('' ,'check5', 'reach')
                             p="Широкий коридор"
                             p="Ширина коридоров в номере не менее 91 см."
-                        +checkbox('' ,'check3', 'reach')
+                        +checkbox('' ,'check4', 'reach')
                             p="Помощник для инвалидов"
                             p="На 1 этаже вас встретит специалист  и проводит до номера."
                     .filter-page__amenities
@@ -97,11 +97,23 @@ html(lang="ru")
                                 p="Девочки"
                             +checkbox("вот так вот", 'check7')
                                 p="Мальчики?"
+                article.filter-page__filter-result
+                    h1.filter-page__header='Номера, которые мы для вас подобрали'
+                    .items-conteiner
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                        +item-card()
+                    .filter-page__paginator
+                        +paginator()
 
-
-
-
-                .filter-page__filter-result
         .cv-page__footer
             +footer()
         script(src='./main.js')

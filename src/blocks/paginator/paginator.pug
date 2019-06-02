@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (paginator)
+
+mixin paginator(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +paginator('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' paginator_' + modsList[i].trim();
+      }
+    }
+
+  .paginator(class=allMods)&attributes(attributes)
+    .paginator__button-block
+      button(type='button').paginator__button.paginator__button_active='1'
+      button(type='button').paginator__button='2'
+      button(type='button').paginator__button='3'
+      button(type='button').paginator__button='...'
+      button(type='button').paginator__button='15'
+      button(type='button').paginator__button.paginator__button_arrow='arrow_forward'
+    p.paginator__text='1 – 12 из 100+ вариантов аренды'
+    block

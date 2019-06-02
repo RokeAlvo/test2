@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока filter-page__paginator, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.filter-page__paginator {
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70/14*1rem;
+}

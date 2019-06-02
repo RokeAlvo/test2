@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока items-conteiner, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.items-conteiner {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12/1440*100vw;
+  margin-bottom: 40/14*1rem;
+}

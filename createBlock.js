@@ -74,7 +74,7 @@ tempBlockName.forEach(function(elem){
         }
 
         else if (extension === 'pug') {
-          fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${bemBlockName})\n\nmixin ${bemBlockName}(text, mods)\n\n  //- Принимает:\n  //-   text    {string} - текст\n  //-   mods    {string} - список модификаторов\n  //- Вызов:\n        +${bemBlockName}('Текст', 'some-mod')\n\n  -\n    // список модификаторов\n    var allMods = '';\n    if(typeof(mods) !== 'undefined' && mods) {\n      var modsList = mods.split(',');\n      for (var i = 0; i < modsList.length; i++) {\n        allMods = allMods + ' ${bemBlockName}--' + modsList[i].trim();\n      }\n    }\n\n  .${bemBlockName}(class=allMods)&attributes(attributes)\n    .${bemBlockName}__inner\n      block\n`;
+          fileContent = `//- Все примеси в этом файле должны начинаться c имени блока (${bemBlockName})\n\nmixin ${bemBlockName}(text, mods)\n\n  //- Принимает:\n  //-   text    {string} - текст\n  //-   mods    {string} - список модификаторов\n  //- Вызов:\n        +${bemBlockName}('Текст', 'some-mod')\n\n  -\n    // список модификаторов\n    var allMods = '';\n    if(typeof(mods) !== 'undefined' && mods) {\n      var modsList = mods.split(',');\n      for (var i = 0; i < modsList.length; i++) {\n        allMods = allMods + ' ${bemBlockName}_' + modsList[i].trim();\n      }\n    }\n\n  .${bemBlockName}(class=allMods)&attributes(attributes)\n    .${bemBlockName}__inner\n      block\n`;
         }
 
         else if (extension === 'img') {
