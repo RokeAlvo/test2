@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/user/public_html/test2/
-    - /bin/cp -R /home/user/repositories/test2/docs $DEPLOYPATH
+    - /bin/cp -R docs $DEPLOYPATH
