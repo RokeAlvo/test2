@@ -35,7 +35,7 @@
     "autoprefixer": "^9.5.1",
     "browserslist": "^4.6.0",
     "jq": "^1.7.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1",
     "view.js": "^4.1.0"
   }
